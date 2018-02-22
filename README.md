@@ -1,2 +1,0 @@
-# ArkellTechInc.github.io
-website
