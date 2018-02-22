@@ -11,7 +11,6 @@ var menuWidth = 250;
 
 //---------------------------------------------------- Media query handling
 
-screen.orientation.lock('portrait');
 
 var portraitBool = true;
 var desktopBool = false;
