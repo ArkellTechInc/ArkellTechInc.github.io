@@ -1,4 +1,4 @@
-alert("javascript LOADED MY FRIEND CANT ADD BTW");
+
 //Id names of elements that will be affected by orientation changes
 var elements = ["topMenu", "menuButton", "container", "botMenu", "sideMenu", "content"];
 
@@ -40,16 +40,16 @@ desktopQuery.addListener(desktopUpdate);
 
 function switchLayout(){
 	//Determines layout to switch to based on portraitBool and desktopBool, then switches to it
-	if (portraitBool) { 	// Portrait phone mode
-		orientation = "Portrait";
+	if (portraitBool == true) { 	// Portrait phone mode
+		currentOrientation = "Portrait";
 	} else {
-		if (!desktopBool) { //Landscape iPad mode
-			orientation = "Landscape";
-		} else { 			//Desktop mode
-			orientation = "Desktop";
+		if (desktopBool == false) { //Landscape iPad mode
+			currentOrientation = "Landscape";
+		} else if (desktopBool == true) { 			//Desktop mode
+			currentOrientation = "Desktop";
 		}
 	}
-	switchOrientation(orientation);
+	switchOrientation(currentOrientation);
 }
 
 
@@ -121,17 +121,17 @@ function updateMenu(){
 	
 	document.getElementById("sideMenu").style.left = -menuWidth + menuProgress * menuWidth + 'px'; 
 	
-	if(orientation == "Portrait"){
+	if(currentOrientation == "Portrait"){
 		document.getElementById("container").style.left	 = (menuProgress * menuWidth) / 2 + "px";
 		document.getElementById("container").style.width = "100vw";
 		document.getElementById("blackBox").style.opacity = menuProgress;
 	}
-	if(orientation == "Landscape"){
+	if(currentOrientation == "Landscape"){
 		document.getElementById("container").style.left	 = (menuProgress * menuWidth) + "px";
 		document.getElementById("container").style.width = "calc(100vw - " + (menuProgress * menuWidth) + "px)";
 		document.getElementById("blackBox").style.opacity = 0;
 	}
-	if(orientation == "Desktop"){
+	if(currentOrientation == "Desktop"){
 		document.getElementById("container").style.left	 = (menuProgress * menuWidth) + "px";
 		document.getElementById("container").style.width = "calc(100vw - " + (menuProgress * menuWidth) + "px)";
 		document.getElementById("blackBox").style.opacity = 0;
