@@ -1,3 +1,4 @@
+alert("javascript LOADED MY FRIEND CANT ADD BTW");
 //Id names of elements that will be affected by orientation changes
 var elements = ["topMenu", "menuButton", "container", "botMenu", "sideMenu", "content"];
 
