@@ -3,28 +3,21 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, width=360, height=640">
-	<meta name="description" content="High Risk Auto Insurance | Burlington.">
+	<meta name="description" content="Contact Us | High Risk Auto Insurance | Burlington.">
 	<meta name="author" content="Arkell Tech Inc">
-	<title>Sweet Lemons Insurance</title>
+	<title>Contact Us | Sweet Lemons Insurance</title>
 	<link rel="stylesheet" href="style/style.css">
-	<link rel="stylesheet" href="swiper/css/swiper.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
 	
-	<div id="container" class="containerPortrait">
-		<div id="content" class="contentPortrait">
+	<div id="container">
+		<div id="content">
 			<!----------------------- content goes here ----------------------->
-				<!-- Slider main container -->
-				<div class="swiper-container">
-					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						
-						<!-- Page 1 --------------------------------------->
-						<div id="page1" class="swiper-slide">
-						<div class="phoneBox"><a href="tel:1-855-447-4750">Call us for a FREE QUOTE: 1-855-HI-RISK-0</a></div>
+			
+				<div class="page" id="1">
+					<div class="phoneBox"><a href="tel:1-855-447-4750">Call us for a FREE QUOTE: 1-855-HI-RISK-0</a></div>
 					<div class="callBackBox">Request a Call Back</div>
 					<div class="contentContainer">
 						<div class="leftContainer">
@@ -61,10 +54,11 @@
 					
 					</div>
 				
-						</div>
-						
-						<!-- Page 2 --------------------------------------->
-						<div id="page2" class="swiper-slide">
+				</div>
+				
+				<!----------------------- page 2 starts here ----------------------->
+				
+				<div class="page" id="2">	
 					<div class="pageTitle darker">Staff Directory</div>
 					<div class="pageSubTitle fullListing">905-335-6925</div>
 					
@@ -108,25 +102,18 @@
 								x223
 							</div>
 							
-						</div>
-						
-						<!-- Page 3 --------------------------------------->
-						<div id="page3" class="swiper-slide">
-						<br>
-						oh man i can't believe it's aNOTHER PAGE 3
-						</div>
-						
-					</div>
-					
-					<!-- Pagination buttons -->
-					<div class="swiper-pagination"></div>
+				</div>
+				
+				<!----------------------- page 3 starts here ----------------------->
+				
+				<div class="page" id="3">
 					
 				</div>
+				
 			<!----------------------- content ends here ----------------------->
 		</div>
 		
-		
-		<div id="botMenu" class="botMenuPortrait">
+		<div id="botMenu">
 			<div id="botLeft">
 				<div id="botTitle">Home Page</div>
 				<div id="botSubTitle">High Risk Auto Insurance Specialists<br />1/5</div>
@@ -134,15 +121,13 @@
 			<div id="botRight"></div>		
 		</div>
 		
-		
-		<div id="blackBox" onclick="hideMenu()"></div>
+		<div id="blackBox"></div>
 	
 	</div>
 	
-	
-	<div id="sideMenu" class="sideMenuPortrait">
+	<div id="sideMenu">
 		<ul>
-			<a href=""><li id="sideMenuTitle" class="sideMenuTitlePortrait">Sweet<div class="lemons">Lemons</div>Insurance</li></a>
+			<a href=""><li id="sideMenuTitle">Sweet<div class="lemons">Lemons</div>Insurance</li></a>
 			<li id="sideMenuPhone"><a href="tel:905-335-6925">905-335-6925</a><br /><a href="tel:1-855-447-4750">1-855-HI-RISK-0</a></li>
 			<a href=""><li>Home</li></a>
 			<a href=""><li>High Risk Auto Insurance <div id="dropDownArrow"></div></li></a>
@@ -154,18 +139,15 @@
 			<a href=""><li>Contact Us</li></a>
 		</ul>
 	</div>
-	<div id="topMenu" class="topMenuPortrait">
-		<button id="menuButton" class="menuButtonPortrait" onclick="toggleMenu()">I I I</button>
+	<div id="topMenu">
+		<button id="menuButton" onclick="toggleMenu()">I I I</button>
 		<a href="tel:1-855-447-4750">
 			<button id="phoneIcon" onclick="togglePhone()"><img src="icons/phoneIcon.svg" alt="Phone Icon"></button></a>
 	</div>
-	<div id="topTitle" class="topTitlePortrait">
+	<div id="topTitle">
 		<button id="title" onclick="sendHome()">Sweet<div class="lemons">Lemons</div>Insurance</button>
 	</div>
-	
-	
-	<script type="text/javascript" src="swiper/js/swiper.min.js"></script>
-	<script type="text/javascript" src="scripts/dopamine.js"></script>
 </body>
-
+	<script type="text/javascript" src="scripts/dopamine.js"></script>
+	<script type="text/javascript" src="scripts/pagination.js"></script>
 </html>

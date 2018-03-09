@@ -2,77 +2,141 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, width=360, height=640">
 	<meta name="description" content="High Risk Auto Insurance | Burlington.">
 	<meta name="author" content="Arkell Tech Inc">
 	<title>Sweet Lemons Insurance</title>
 	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="swiper/css/swiper.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
 	
-	<div id="container">
-		<div id="content">
-			<div id="bigolbox">
-			<!------------------------------------------ content goes here ---------------------------------------------------------->	
-				<div class=""></div>
-				<h1 id="pageTitle">HIGH RISK INSURANCE FOR CARELESS DRIVING</h1>
-				<div class="hLine"></div>
-				<div class="text2">From the moment we get our driver's license, the ability to drive our own car makes getting where we 
-				want to go a whole lot easier.</div><br /><div class="text2">While many of us will go years with a squeaky-clean driving record, getting caught in a 
-				situation that suddenly changes that can happen in minutes. It is absolutely possible to be free from high risk insurance 
-				for careless drivers.</div><br /><div class="text2">This will take time, but with the right plan you can regain your good driving record and reap the 
-				benefits of low insurance rates once again – and faster than you may think.</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			<!------------------------------------------ content stops here ---------------------------------------------------------->
-			</div>
+	<div id="container" class="containerPortrait">
+		<div id="content" class="contentPortrait">
+			<!----------------------- content goes here ----------------------->
+				<!-- Slider main container -->
+				<div class="swiper-container">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						
+						<!-- Page 1 --------------------------------------->
+						<div id="page1" class="swiper-slide">
+							<h1 class="pageTitle">The High Risk Auto Insurance Specialists</h1>
+							<div class="hLine"></div>
+							<div id="boxContainer">
+						
+								<div id="carelessDrivingBox" class="iconBox">
+									<div class="icons"><img src="icons/cdIcon.svg" alt="Careless Driving Icon"></div>
+									<div class="iconLabel">Careless Driving</div>
+								</div>
+							
+								<div id="impairedDrivingBox" class="iconBox">
+									<div class="icons"><img src="icons/idIcon.svg" alt="Impaired Driving Icon"></div>
+									<div class="iconLabel">Impaired Driving</div>
+								</div><br />
+							
+								<!-- 2 elements per line-->
+							
+								<div id="streetRacingBox" class="iconBox">
+									<div class="icons"><img src="icons/srIcon.svg" alt="Street Racing Icon"></div>
+									<div class="iconLabel">Street Racing</div>
+								</div>
+							
+								<div id="trafficTicketsBox" class="iconBox">
+								
+									<div class="icons"><img src="icons/ttIcon.svg" alt="Traffic Tickets Icon"></div>
+									<div class="iconLabel">Traffic Tickets</div>
+								</div>
+							
+							</div>
+							<div class="hLine"></div>
+						</div>
+						
+						<!-- Page 2 --------------------------------------->
+						<div id="page2" class="swiper-slide">
+							<h1 class="pageTitle">Why am I a High Risk Driver?</h1>
+							<div class="infoBoxLine">
+								<div class="infoBox">
+									<div class="infoBoxTitle">Speeding</div>
+									<div class="infoBoxContent">1-15km/h</a>.</div>
+									<div class="infoBoxHighlight">$17.50 - $52.50<br />0 Demerit Points</div>
+									<a href=""><div class="infoBoxLink">Read more on speeding.</div></a>
+									<a href="http://ontariospeeding.com/speeding-ticket-penalties/speeding-ticket-fines/"><div class="infoBoxFooter">A detailed breakdown of speeding ticket costs</div></a>
+								
+								</div>
+							</div>
+							<div class="didYouKnowBox">
+								<div class="didYouKnow">Going faster?</div>
+									<ul>
+										<li>1-15km/h</li>
+										<li>16-29km/h</li>
+										<li>30-49km/h</li>
+										<li>50+km/h</li>
+										<li>Fighting a ticket</li>
+									</ul>
+							</div>
+							<div class="phoneBox"><a href="tel:1-855-447-4750">Call us for a FREE QUOTE: 1-855-HI-RISK-0</a></div>
+						</div>
+						
+						<!-- Page 3 --------------------------------------->
+						<div id="page3" class="swiper-slide">
+							<br>
+							Heyyyy woah look i'm a page 3
+						</div>
+						
+					</div>
+					
+					<!-- Pagination buttons -->
+					<div class="swiper-pagination"></div>
+					
+				</div>
+			<!----------------------- content ends here ----------------------->
 		</div>
 		
-		<div id="botMenu">
+		
+		<div id="botMenu" class="botMenuPortrait">
 			<div id="botLeft">
-				<div id="botTitle">Careless Driving</div>
-				<div id="botSubTitle">Know the facts<br />1/3</div>
+				<div id="botTitle">Home Page</div>
+				<div id="botSubTitle">High Risk Auto Insurance Specialists<br />1/5</div>
 			</div>
-			<div id="botRight">right bot</div>		
+			<div id="botRight"></div>		
 		</div>
 		
-		<div id="blackBox"></div>
+		
+		<div id="blackBox" onclick="hideMenu()"></div>
 	
 	</div>
 	
-	<div id="sideMenu">
+	
+	<div id="sideMenu" class="sideMenuPortrait">
 		<ul>
-			<li>Home</li>
-			<li>High Risk Auto Insurance <div id="dropDownArrow"></div></li>
-			<li class="subMenu">Careless Driving</li>
-			<li class="subMenu">Impaired Driving</li>
-			<li class="selected subMenu">Secondary Drivers</li>
-			<li class="subMenu">Street Racing</li>
-			<li class="subMenu">Traffic Tickets</li>
-			<li>Blog</li>
-			<li>Contact Us</li>
+			<a href=""><li id="sideMenuTitle" class="sideMenuTitlePortrait">Sweet<div class="lemons">Lemons</div>Insurance</li></a>
+			<li id="sideMenuPhone"><a href="tel:905-335-6925">905-335-6925</a><br /><a href="tel:1-855-447-4750">1-855-HI-RISK-0</a></li>
+			<a href=""><li>Home</li></a>
+			<a href=""><li>High Risk Auto Insurance <div id="dropDownArrow"></div></li></a>
+			<a href=""><li class="subMenu">Careless Driving</li></a>
+			<a href=""><li class="subMenu">Impaired Driving</li></a>
+			<a href=""><li class="subMenu">Street Racing</li></a>
+			<a href=""><li class="subMenu">Traffic Tickets</li></a>
+			<a href=""><li>Blog</li></a>
+			<a href=""><li>Contact Us</li></a>
 		</ul>
 	</div>
-	<div id="topMenu">
-		<button id="menuButton" onclick="toggleMenu()">I I I</button>
-		<button id="phoneIcon" onclick="togglePhone()">hi</button>
+	<div id="topMenu" class="topMenuPortrait">
+		<button id="menuButton" class="menuButtonPortrait" onclick="toggleMenu()">I I I</button>
+		<a href="tel:1-855-447-4750">
+			<button id="phoneIcon" onclick="togglePhone()"><img src="icons/phoneIcon.svg" alt="Phone Icon"></button></a>
 	</div>
-	<div id="topTitle">
-		<button id="title" onclick="sendHome()">Sweet<div id="lemons">Lemons</div>Insurance</button>
+	<div id="topTitle" class="topTitlePortrait">
+		<button id="title" onclick="sendHome()">Sweet<div class="lemons">Lemons</div>Insurance</button>
 	</div>
-</body>
+	
+	
+	<script type="text/javascript" src="swiper/js/swiper.min.js"></script>
 	<script type="text/javascript" src="scripts/dopamine.js"></script>
+</body>
+
 </html>

@@ -15,7 +15,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-style: inherit;
 	font-size: 100%;
 	vertical-align: baseline;
-	overflow: hidden;
+	text-decoration: none;
 }
 section, article, aside, header, footer, nav, dialog, figure {
 	display:block;
@@ -27,6 +27,7 @@ body {
 	line-height: 1;
 	color: black;
 	background: white;
+	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -50,24 +51,315 @@ blockquote, q {
 *{
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	box-sizing: border-box;
-	color: white;
+	color: #EEE;
 }
+li:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+body {
+	background-color: #FDFDFF;
+}
+.addressButton {
+	padding: 2vh 0 0 0;
+	float: right;
+	color: #333;
+	font-weight: 100;
+	font-size: 3.5vmin;
+	font-style: italic;
+	display: inline-block;
+	width: 40%;
+	text-align: center;
+}
+.addressButton img {
+	width: 8vmin;
+	height: 8vmin;
+}
+.addressText {
+	float: left;
+	padding: 4vh 0 0 0;
+	display: inline-block;
+	color: inherit;
+	width: 60%;
+}
+.alignLeft {
+	text-align: left;
+	text-indent: 5vmin;
+}
+
+.callBackBox {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 4vmin;
+	letter-spacing: 0.1vmin;
+	padding: 1.5vh 3vw 1.5vh 3vw;
+	border-radius: 1vmin;
+	background-color: #029eb6;
+	width: 90%;
+	margin: 2vh auto 2vh auto;
+	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
+}
+.contentContainer {
+	border-top: 1px solid #CCC;
+	width: 92%;
+	margin: 0 auto 0 auto;
+	padding: 2vh 0 0 0;
+}
+.darker {
+	color: #333 !important;
+}
+.didYouKnowBox {
+	display: inline-block;
+	float: right;
+	margin: 4vh 0 0 0;
+	padding: 3vh 0 0 4vw;
+	text-align: left;
+	width: 40%;
+}
+.didYouKnow {
+	color: #555 !important;
+	font-weight: bold;
+	font-size: 5vmin;
+	letter-spacing: 0.2vmin;
+	margin: 0 0 2vh 0;
+}
+.didYouKnowBox ul li {
+	color: #0b52a0;
+	line-height: 5vh;
+	font-weight: bold;
+	font-size: 3.5vmin;
+}
+
 .displayNone {
 	display: none;
 }
+.emailIcon {
+	display: inline-block;
+	margin: 0 2vmin 0 2vmin;
+}
+.emailIcon img {
+	width: 5vmin;
+	height: 5vmin;
+}
+.extIcon {
+	margin: 0 2vmin 0 2vmin;
+	display: inline-block;
+}
+.extIcon img {
+	width: 5vmin;
+	height: 5vmin;
+}
+.fullListing {
+	display: inline-block;
+	line-height: 4vmin !important;
+	vertical-align: middle;
+}
+.fullListing img {
+	vertical-align: top;
+	width: 4vmin !important;
+	height: 4vmin !important;
+}
 .hLine {
-	width: 100%;
-	border-bottom: 1px solid black;
+	width: 30%;
+	border-bottom: 2px solid #0b52a0;
 	line-height: 1vh;
-	margin-bottom: 3vh;
+	margin: 3vh auto 3vh auto;
 	/* do a line */
+}
+.hoursBox {
+	color: #666;
+	font-weight: bold;
+	font-size: 3vmin;
+	line-height: 3.5vmin;
+	letter-spacing: 0.2vmin;
+	padding: 2vh 3vw 2vh 3vw;
+	border-radius: 2vmin;
+	background-color: #FFFFBD;
+	margin: 2vh auto 2vh auto;
+	width: 80%;
+	text-align: center;
+}
+.iconBox {
+	position: relative;
+	display: inline-block;
+	width: 25vmin;
+	height: 25vmin;
+}
+.iconLabel {
+	position: absolute;
+	font-size: 3vmin;
+	width: 100%;
+	bottom: 0;
+	padding: 2vmin;
+}
+.icons {
+	width: 25vmin;
+	height: 25vmin;
+	object-fit: contain;
+}
+.icons img{
+	display: block;
+	margin: 2.5vmin auto 0 auto;
+	vertical-align: middle;
+	width: 15vmin;
+	height: 15vmin;
+	
+}
+.infoBoxLine {
+	display: inline-block;
+	float: left;
+	margin: 2vh 0 2vh 0;
+	width: 60%;
+	border-right: 1px solid #EEE;
+	padding: 0 0 0 0;
+}
+.infoBox {
+	width: 90%;
+	height: 100%;
+	margin: 2vh 0 2vh 0;
+	padding: 3vh 3vw 3vh 3vw;
+	border: 1px solid #EEE;
+	border-radius: 0.5vmin;
+	text-align: left;
+	background-color: white;
+}
+.infoBoxAddress {
+	color: #555;
+	font-weight: bold;
+	font-size: 3.5vmin;
+	line-height: 3.5vmin;
+}
+.infoBoxContent {
+	color: #555;
+	font-weight: regular;
+	font-size: 4vmin;
+	letter-spacing: 0.1vmin;
+	padding: 2vh 0 2vh 0;
+}
+.infoBoxFooter {
+	color: #0b52a0;
+	text-align: center;
+	font-weight: regular;
+	font-size: 3vmin;
+	letter-spacing: 0.1vmin;
+	padding: 1vh 0 1vh 0;
+}
+.infoBoxHighlight {
+	color: #666;
+	font-weight: bold;
+	font-size: 3vmin;
+	line-height: 3.5vmin;
+	letter-spacing: 0.1vmin;
+	padding: 2vh 3vw 2vh 3vw;
+	border-radius: 2vmin;
+	background-color: #D7FFFF;
+}
+.infoBoxLink {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 3vmin;
+	letter-spacing: 0.1vmin;
+	padding: 1.5vh 3vw 1.5vh 3vw;
+	border-radius: 1vmin;
+	background-color: #029eb6;
+	width: 80%;
+	margin: 2vh auto 2vh auto;
+	box-shadow: 0.1vmin 0.1vmin 0.1vmin #AAA;
+}
+.infoBoxTitle {
+	color: #555;
+	font-weight: bold;
+	font-size: 5vmin;
+	letter-spacing: 0.2vmin;
+}
+.jobTitle {
+	color: #333;
+	font-weight: 100;
+	padding: 0 0 0.5vh 0;
+}
+.leftContainer {
+	display: inline-block;
+	float: left;
+	width: 40%;
+	border-right: 1px solid #CCC;
+}
+.lemons {
+	display: inline;
+	color: #fdc43e !important;
+}
+.page {
+	position: absolute;
+	width: inherit;
+	height: 100%;
+}
+.pageSubTitle {
+	color: #999;
+	font-size: 4vmin;
+	font-weight: bold;
+	text-align: left;
+}
+.pageTitle {
+	color: #999;
+	font-size: 5vmin;
+	font-weight: bold;
+	margin-top: 2vh;
+}
+.phoneBox {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 4vmin;
+	letter-spacing: 0.1vmin;
+	padding: 1.5vh 3vw 1.5vh 3vw;
+	border-radius: 1vmin;
+	background-color: #fdc43e;
+	width: 90%;
+	margin: 2vh auto 2vh auto;
+	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
+}
+.phoneBox a {
+	color: inherit;
+}
+.rightContainer {
+	display: inline-block;
+	float: right;
+	width: 60%;
+	padding: 0 0 0 4vmin;
+	height: 100%;
 }
 .selected {
 	background-color: rgba(255, 255, 255, 0.2);
 }
+.staffMember {
+	border-top: 1px solid #CCC;
+	padding-top: 1vh;
+	margin: 1vh auto 0 auto;
+	width: 90%;
+	color: #333;
+	font-size: 3.5vmin;
+	font-weight: bold;
+	line-height: 5vmin;
+}
 .subMenu {
 	text-indent: 30px;
 	font-weight: lighter;
+}
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	
+	
+	text-align: center;
+}
+.swiper-scrollbar {
+	height: 20vh;
+}
+.swiper-slide {
+	color:black;
+}
+.swiper-wrapper {
+	
 }
 .text2 {
 	text-align: left;
@@ -75,18 +367,13 @@ blockquote, q {
 	font-weight: lighter;
 	text-indent: 5vw;
 	line-height: 5vw;
-	color: black;
+	color: #1c252b;
 }
-#blackBox {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to right, black, rgba(255,0,0,0));
-	opacity: 0;
+.underline {
+	color: inherit;
+	text-decoration: underline;
 }
-
+/* ------------------------------------------------ Common ID styles ------------------------------------------------- */
 #bigolbox {
 	position: absolute;
 	top: 5%;
@@ -97,6 +384,71 @@ blockquote, q {
 	vertical-align: middle;
 	color: black;
 }
+#blackBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, black, rgba(255,0,0,0));
+	opacity: 0;
+	z-index: 11;
+}
+#boxContainer {
+	width: 100%;
+	margin: 0 auto 0 auto;
+}
+#botMenu {
+	
+}
+#botLeft {
+	position: relative;
+	float: left;
+	display: inline;
+	text-align: center;
+	width: 30vw;
+	height: 20vh;
+	color: white;
+}
+#botRight {
+	position: relative;
+	float: right;
+	display: inline;
+	width: 70vw;
+	height: 20vh;
+	background-color: #0b52a0;
+}
+#botSubTitle {
+	font-size: 1.8vh;
+	line-height: 2vh;
+	width: 90%;
+	margin: 0 auto 0 auto;
+}
+#botTitle {
+	
+	font-size: 3vh;
+	border: 2px solid white;
+	width: 20vw;
+	padding: 1vh 1vh 1.5vh 1vh;
+	margin: 2vh auto 2vh auto;
+}
+#carelessDrivingBox {
+	background-color: #0b52a0;
+}
+
+#container {
+	position: absolute;
+	width: inherit;
+	
+}
+#content {
+	
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	
+}
 #dropDownArrow {
 	display: inline-block;
 	width: 0; 
@@ -106,131 +458,107 @@ blockquote, q {
 	border-right: 6px solid transparent;
 	border-top: 6px solid white;
 }
-#lemons {
-	display: inline;
-	color: #fdc43e;
+#impairedDrivingBox {
+	background-color: #3E85D3;
+}
+#map {
+	width: 40vmin;
+	height: 40vmin;
+}
+#menuButton {
+	position: relative;
+	z-index: 10;
+	float: left;
+	display: block;
+	width: calc(10vh);
+	height: calc(10vh);
+	min-height: 44px;
+	font-size: 4vh;
+	letter-spacing: -0.5vh;
+	background-color: #0b52a0;
+	border: none;
+	/* various browser font rotators and de-selectors*/
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	-webkit-user-select: none;      
+	-moz-user-select: none;
+	-ms-user-select: none; 
+	user-select: none;
+}
+#phoneIcon {
+	position: relative;
+	z-index: 10;
+	float: right;
+	display: inline-block;
+	width: calc(10vh);
+	height: calc(10vh);
+	min-width: 44px;
+	min-height: 44px;
+	background-color: #0b52a0;
+	border: none;
+}
+#phoneIcon img {
+	width: 8vmin;
+	height: 8vmin;
 }
 #sideMenu {
+	position: absolute;
 	display: table;
+	background-color: #0b52a0;
+	z-index: 20;
 }
 #sideMenu ul {
 	display: table-cell;
 }
 #sideMenu ul li {
 	display: block;
+	padding-left: 20px;
 	vertical-align: middle;
-	padding: 20px;
-	font-size: 19px;
-	letter-spacing: 1px;
+	line-height: 7vh;
+	font-size: 5vw;
+	letter-spacing: 0.1vmin;
 	font-weight: regular;
 }
+#sideMenuPhone {
+	background-color: #0b52a0;
+	font-weight: bold;
+	text-align: center;
+}
+#sideMenuTitle {
+	background-color: rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	text-align: center;
+}
+#streetRacingBox {
+	clear: both;
+	background-color: #3E85D3;
+}
+#title {
+	background-color: #0b52a0;
+	border: none;
+	font-size: 5vw;
+	text-align: center;
+}
+#topMenu {
+	position: absolute;
+	line-height: 10vh;
+}
+#topTitle {
+	position: relative;
+	line-height: 10vh;
+	width: 100%;
+	text-align: center;
+	background-color: #0b52a0;
+}
+#trafficTicketsBox {
+	background-color: #0b52a0;
+}
+
+/* ---------------------------Portrait Classes-------------------------------- */
 	
-/* ------------------------------------------------ Begin Responsive Design ------------------------------------------------- */
-/* Common ID styles */
-	#botMenu {
-		
-	}
-	#botLeft {
-		position: relative;
-		float: left;
-		display: inline;
-		text-align: center;
-		width: 30vw;
-		height: 20vh;
-		color: white;
-	}
-	#botRight {
-		position: relative;
-		float: right;
-		display: inline;
-		width: 70vw;
-		height: 20vh;
-		background-color: blue;
-	}
-	#botSubTitle {
-		font-size: 3vw;
-		line-height: 2.5vh;
-	}
-	#botTitle {
-		font-size: 4vw;
-		border: 2px solid white;
-		width: 20vw;
-		padding: 1vh 0 1.5vh 0;
-		margin: 2vh auto 2vh auto;
-	}
-	#container {
-		position: absolute;
-		width: 100vw;
-	}
-	#content {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
-	#menuButton {
-		position: relative;
-		z-index: 10;
-		float: left;
-		display: block;
-		width: calc(10vh);
-		height: calc(10vh);
-		min-height: 44px;
-		font-size: 4vh;
-		letter-spacing: -0.5vh;
-		background-color: #0b52a0;
-		border: none;
-		/* various browser font rotators and de-selectors*/
-		-webkit-transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		-o-transform: rotate(-90deg);
-		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-		-webkit-user-select: none;      
-		-moz-user-select: none;
-		-ms-user-select: none; 
-		user-select: none;
-	}
-	#pageTitle {
-		color: black;
-		padding: 2vh 0vw 4vh 0vw;
-	}
-	#phoneIcon {
-		position: relative;
-		z-index: 10;
-		float: right;
-		display: inline-block;
-		width: calc(10vh);
-		height: calc(10vh);
-		min-width: 44px;
-		min-height: 44px;
-		background-color: #0b52a0;
-		border: none;
-	}
-	#sideMenu {
-		position: absolute;
-		background-color: #0b52a0;
-	}
-	#title {
-		background-color: #0b52a0;
-		border: none;
-		font-size: 5vw;
-		text-align: center;
-	}
-	#topMenu {
-		position: absolute;
-		line-height: 10vh;
-	}
-	#topTitle {
-		position: relative;
-		line-height: 10vh;
-		width: 100%;
-		text-align: center;
-		background-color: #0b52a0;
-	}
-
-/* Portrait Classes */
-
 	.botMenuPortrait {
 		position: absolute;
 		top: 70vh;
@@ -250,14 +578,19 @@ blockquote, q {
 	.menuButtonPortrait {
 	}
 	.pageTitlePortrait {
-		font-size: 6vw;
-		line-height: 7vw;
+
 	}
 	.sideMenuPortrait {
 		top: 10vh;
 		left: -300px;
 		width: 300px;
 		height: 90vh;
+	}
+	.sideMenuPhonePortrait {
+		display: none !important;
+	}
+	.sideMenuTitlePortrait {
+		display: none !important;
 	}
 	.topMenuPortrait {
 		top: 0;
@@ -267,76 +600,55 @@ blockquote, q {
 		background-color: #0b52a0;
 	}
 
-/* Landscape Classes */
-
-	.botMenuLandscape {
+/* -------------------------------------Landscape classes --------------------------------------*/
+	.blackBoxLandscape {
 		display: none;
 	}
+	.botMenuLandscape {
+		display: none !important;
+	}
 	.containerLandscape {
-		top: 10vh;
-		left: 0;
-		height: 90vh;
+		top: 0;
+		left: 300px;
+		height: 100vh;
 	}
 	.contentLandscape {
 		height: 100%;
 	}
 	.menuButtonLandscape {
-		
+		display: none !important;
 	}
 	.pageTitleLandscape {
-		font-size: 6vw;
-		line-height: 7vw;
-		
 	}
 	.sideMenuLandscape {
-		top: 10vh;
-		left: -300px;
+		top: 0;
+		left: 0;
 		width: 300px;
-		height: 90vh;
+		height: 100vh;
+	}
+	.sideMenuLandscape ul li {
+		font-size: 22px !important;
+	}
+	.sideMenuPhoneLandscape {
+		font-weight: normal !important;
+		letter-spacing: 3px !important;
+		font-size: 22px !important;
+		line-height: 22px !important;
+		padding: 20px 0 10px 0 !important;
+	}
+	.sideMenuPhoneLandscape a {
+		/*pointer-events: none;*/
+	}
+	.sideMenuTitleLandscape {
+		font-size: 22px !important;
+		line-height: 60px !important;
+		padding: 0px !important;
 	}
 	.topMenuLandscape {
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 10vh;
-		background-color: #0b52a0;
+		display: none !important;
 	}
-
-/* Desktop classes */
-
-	.botMenuDesktop {
-		display: none;
-	}
-	.containerDesktop {
-		top: 0;
-		left: 300px;
-		height: 100vh;
-	}
-	.contentDesktop {
-		height: 100%;
-	}
-	.menuButtonDesktop {
-		display: none;
-	}
-	.pageTitleDesktop {
-		font-size: 48px;
-		width: 50vw;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: left;
-		line-height: 60px;
-	}
-	.sideMenuDesktop {
-		top: 0;
-		left: 0;
-		width: 300px;
-		height: 100vh;
-	}
-	.topMenuDesktop {
-		display: none;
-	}
-	.topTitleDesktop {
-		display: none;
+	.topTitleLandscape {
+		display: none !important;
 	}
 	
 /* ------------------------------------------------ Class Media Queries ------------------------------------------------- */
@@ -355,4 +667,16 @@ blockquote, q {
 		margin-right: auto;
 	}
 }
-
+@media screen and (min-width: 450px) and (orientation: portrait) {
+	.sideMenuPortrait ul li {
+		font-size: 3vw !important;
+	}
+}
+@media (min-aspect-ratio: 3/4) {
+	.botMenuPortrait {
+		display: none !important;
+	}
+	.contentPortrait {
+		height: 100%;
+	}
+}
