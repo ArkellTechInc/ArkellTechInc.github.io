@@ -490,18 +490,7 @@ body {
 .swiper-container {
 	width: 100%;
 	height: 100%;
-	
-	
 	text-align: center;
-}
-.swiper-scrollbar {
-	height: 20vh;
-}
-.swiper-slide {
-	color:black;
-}
-.swiper-wrapper {
-	
 }
 .text2 {
 	text-align: left;

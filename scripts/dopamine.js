@@ -1,5 +1,5 @@
 //Id names of elements that will be affected by orientation changes
-var elements = ["topMenu", "menuButton", "container", "botMenu", "sideMenu", "content", "topTitle", "sideMenuTitle", "sideMenuPhone", "blackBox", "boxContainer"];
+var elements = ["topMenu", "menuButton", "container", "sideMenu", "content", "topTitle", "sideMenuTitle", "sideMenuPhone", "blackBox"];
 
 var mySwiper = undefined;
 var menuVisible;
@@ -227,10 +227,10 @@ function goToDir() {
 function pageStyleUpdate() {
 	switch (currentOrientation) {
 		case "Portrait":
-		
+			$(".contentContainer").css("height","auto!important");
 			break;
 		case "Landscape":
-		
+			$(".contentContainer").css("height","100vh");
 			break;
 	}
 }
@@ -308,31 +308,3 @@ function toggleBox(index){
 		}
 	}
 }
-// JQuery Form Validation Dongle
-$("#contactForm").validate(
-      {
-        rules: 
-        {
-          fullname: 
-          {
-            required: true
-          },
-          email: 
-          {
-            required: true,
-            email: true
-          }
-        },
-        messages: 
-        {
-          fullname: 
-          {
-            required: "Please enter your name"
-          },
-          email: 
-          {
-            required: "Please enter an email."
-          }
-		}
-	}
-);
