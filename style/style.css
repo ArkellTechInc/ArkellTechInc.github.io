@@ -726,10 +726,12 @@ body {
 #topMenu {
 	position: absolute;
 	line-height: 10vh;
+	min-height: 44px;
 }
 #topTitle {
 	position: relative;
 	line-height: 10vh;
+	min-height: 44px !important;
 	width: 100%;
 	text-align: center;
 	background-color: #0b52a0;
