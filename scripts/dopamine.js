@@ -13,9 +13,9 @@ var menuWidth = 300;
 
 //-- Media query handling -------------------------------------------------
 
-var portraitBool = true;
+var landscapeBool = false;
 var currentOrientation = "Portrait";
-var portraitQuery = window.matchMedia("(orientation: portrait)");
+var landscapeQuery = window.matchMedia("(orientation: landscape)");
 
 //-- Call Back Check -----
 var callBackOff = true;
@@ -24,9 +24,9 @@ var xMark = "\u2716";
 //-- Document is ready :0 ---------------
 $(document).ready(function(){
 	// Attach listeners to trigger updates on state changes
-	portraitQuery.addListener(portraitUpdate); 
+	landscapeQuery.addListener(landscapeUpdate); 
 	// Call update functions once at run time, Swiper is now initialized here
-	portraitUpdate(portraitQuery);
+	landscapeUpdate(landscapeQuery && window.innerWidth>1100);
 	updateMenu(); 
 	//Prevent animation from running if site is loaded on desktop
 	menuProgress = menuTarget;
@@ -53,18 +53,18 @@ function initSwiper(){
 	});
 }
 
-function portraitUpdate(portraitQuery) {
-	portraitBool = portraitQuery.matches;
+function landscapeUpdate(landscapeQuery) {
+	landscapeBool = landscapeQuery.matches;
 	switchLayout();
 }
 
 
 function switchLayout(){
 	//Determines layout to switch to based on portraitBool, then switches to it
-	if (portraitBool) { 	// Portrait phone mode
-		currentOrientation = "Portrait";
-	} else {
+	if (landscapeBool) { 	// Portrait phone mode
 		currentOrientation = "Landscape";
+	} else {
+		currentOrientation = "Portrait";
 	}
 
 	switchOrientation(currentOrientation);
@@ -308,3 +308,31 @@ function toggleBox(index){
 		}
 	}
 }
+// JQuery Form Validation Dongle
+$("#contactForm").validate(
+      {
+        rules: 
+        {
+          fullname: 
+          {
+            required: true
+          },
+          email: 
+          {
+            required: true,
+            email: true
+          }
+        },
+        messages: 
+        {
+          fullname: 
+          {
+            required: "Please enter your name"
+          },
+          email: 
+          {
+            required: "Please enter an email."
+          }
+		}
+	}
+);
