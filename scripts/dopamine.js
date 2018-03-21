@@ -13,9 +13,11 @@ var menuWidth = 300;
 
 //-- Media query handling -------------------------------------------------
 
-var landscapeBool = false;
+var portraitBool = true;
+var widthBool = true;
 var currentOrientation = "Portrait";
-var landscapeQuery = window.matchMedia("(orientation: landscape)");
+var portraitQuery = window.matchMedia("(orientation: portrait)");
+var widthQuery = window.matchMedia("(min-width: 800px)");
 
 //-- Call Back Check -----
 var callBackOff = true;
@@ -24,9 +26,13 @@ var xMark = "\u2716";
 //-- Document is ready :0 ---------------
 $(document).ready(function(){
 	// Attach listeners to trigger updates on state changes
-	landscapeQuery.addListener(landscapeUpdate); 
+	portraitQuery.addListener(portraitUpdate);
+	widthQuery.addListener(widthUpdate);
+	
+	
 	// Call update functions once at run time, Swiper is now initialized here
-	landscapeUpdate(landscapeQuery && window.innerWidth>1100);
+	portraitUpdate(portraitQuery);
+	widthUpdate(widthQuery);
 	updateMenu(); 
 	//Prevent animation from running if site is loaded on desktop
 	menuProgress = menuTarget;
@@ -53,18 +59,23 @@ function initSwiper(){
 	});
 }
 
-function landscapeUpdate(landscapeQuery) {
-	landscapeBool = landscapeQuery.matches;
+function portraitUpdate(portraitQuery) {
+	portraitBool = portraitQuery.matches;
+	switchLayout();
+}
+function widthUpdate(widthQuery) {
+	widthBool = widthQuery.matches;
 	switchLayout();
 }
 
 
 function switchLayout(){
+	console.log(widthBool);
 	//Determines layout to switch to based on portraitBool, then switches to it
-	if (landscapeBool) { 	// Portrait phone mode
-		currentOrientation = "Landscape";
-	} else {
+	if (portraitBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
+	} else if(widthBool){
+		currentOrientation = "Landscape";
 	}
 
 	switchOrientation(currentOrientation);
@@ -227,10 +238,10 @@ function goToDir() {
 function pageStyleUpdate() {
 	switch (currentOrientation) {
 		case "Portrait":
-			$(".contentContainer").css("height","auto!important");
+		
 			break;
 		case "Landscape":
-			$(".contentContainer").css("height","100vh");
+		
 			break;
 	}
 }
@@ -308,31 +319,3 @@ function toggleBox(index){
 		}
 	}
 }
-// JQuery Form Validation Dongle
-$("#contactForm").validate(
-      {
-        rules: 
-        {
-          fullname: 
-          {
-            required: true
-          },
-          email: 
-          {
-            required: true,
-            email: true
-          }
-        },
-        messages: 
-        {
-          fullname: 
-          {
-            required: "Please enter your name"
-          },
-          email: 
-          {
-            required: "Please enter an email."
-          }
-		}
-	}
-);
