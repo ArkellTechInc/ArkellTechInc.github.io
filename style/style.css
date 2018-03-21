@@ -27,7 +27,6 @@ body {
 	line-height: 1;
 	color: black;
 	background: white;
-	overflow: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -59,51 +58,50 @@ li:hover {
 body {
 	background-color: #FDFDFF;
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #CCC;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #CCC;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #CCC;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #CCC;
+}
 .addressButton {
-	padding: 2vh 0 0 0;
+	display: inline-block;
 	float: right;
 	color: #333;
 	font-weight: 100;
 	font-size: 3.5vmin;
 	font-style: italic;
-	display: inline-block;
 	width: 40%;
 	text-align: center;
 }
-.addressButton img {
-	width: 8vmin;
-	height: 8vmin;
-}
 .addressText {
 	float: left;
-	padding: 4vh 0 0 0;
 	display: inline-block;
-	color: inherit;
+	color: #333;
 	width: 60%;
 }
 .alignLeft {
 	text-align: left;
 	text-indent: 5vmin;
 }
-
-.callBackBox {
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	font-size: 4vmin;
-	letter-spacing: 0.1vmin;
-	padding: 1.5vh 3vw 1.5vh 3vw;
-	border-radius: 1vmin;
-	background-color: #029eb6;
-	width: 90%;
-	margin: 2vh auto 2vh auto;
-	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
+.callBackText {
+	font-size: 16px;
+}
+.clearBoth {
+	clear: both;
 }
 .contentContainer {
-	border-top: 1px solid #CCC;
-	width: 92%;
+	width: 100%;
 	margin: 0 auto 0 auto;
-	padding: 2vh 0 0 0;
+	padding: 2vh 4% 0 4%;
+	height: 100vh;
+	border-bottom: 1px dotted #CCC;
 }
 .darker {
 	color: #333 !important;
@@ -133,31 +131,137 @@ body {
 .displayNone {
 	display: none;
 }
+.doodle {
+	width: 100%;
+	object-fit: contain;
+}
+.doodle img {
+	max-height: 80%;
+}
 .emailIcon {
 	display: inline-block;
 	margin: 0 2vmin 0 2vmin;
-}
-.emailIcon img {
-	width: 5vmin;
-	height: 5vmin;
 }
 .extIcon {
 	margin: 0 2vmin 0 2vmin;
 	display: inline-block;
 }
-.extIcon img {
-	width: 5vmin;
-	height: 5vmin;
+.faster {
+	font-weight: bold;
+	font-style: italic;
+}
+.footerBox {
+	vertical-align: bottom;
+	font-size: 14px;
+	color: #333;
+	padding-bottom: 4vh;
+}
+.footerBox a {
+	color: #0b52a0;
+	text-decoration: underline;
+}
+.formBox {
+	font-size: 4vmin;
+	margin: 3vh 0;
+	line-height: 3.5vh;
+}
+.formBox button {
+	display: block;
+	line-height: 5vh;
+	font-size: 4vmin;
+	clear: both;
+	float: none !important;
+	margin: 1vh auto !important;
+	text-align: center !important;
+	background-color: #3E85D3;
+	border-radius: 12px;
+	padding: 1vh 5vmin;
+	border: none;
+}
+.formBox button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.formBox label {
+	display: inline-block;
+	color: white;
+	font-weight: 600;
+	width: 30%;
+	text-align: right;
+}
+.formBox label.error{
+	position: absolute;
+	left: 0;
+	display: block;
+	color: white;
+	text-align: center!important;
+	width: 100vw;
+	font-size: 75%;
+	font-style: italic;
+	transform: translate(0,-190%);
+	-ms-transform: translate(0, -190%);
+    -webkit-transform: translate(0, -190%);
+}
+.formBox input {
+	padding: 2px 4px;
+}
+.formBox select,.formBox input,.formBox textarea {
+	float: right;
+	font-size: inherit;
+	color: #333;
+	width: 60%;
+	margin: 0 5%;
+	text-align: left;
+	border: 1px solid #AAA;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.10), 0px 1px 0 rgba(255,255,255,0.4);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.10),0px 1px 0 rgba(255,255,255,0.4);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.10), 0px 1px 0 rgba(255,255,255,0.4);
+    -webkit-transition: border linear .2s,box-shadow linear .2s;
+    -moz-transition: border linear .2s,box-shadow linear .2s;
+    -ms-transition: border linear .2s,box-shadow linear .2s;
+    -o-transition: border linear .2s,box-shadow linear .2s;
+    transition: border linear .2s,box-shadow linear .2s;
+	overflow: hidden;
+	
+}
+.formBox select {
+	background-color: white;
+}
+.formBox select option {
+	font-size: inherit;
+	color: inherit;
+}
+.formBox textarea {
+	margin-bottom: 2vh;
+}
+.formContainer {
+	margin-top: 4vh;
+	padding: 0.1vh 0;
+	line-height: 0;
+	background-color: #0b52a0;
+	border-radius: 24px;
 }
 .fullListing {
 	display: inline-block;
 	line-height: 4vmin !important;
 	vertical-align: middle;
 }
-.fullListing img {
-	vertical-align: top;
-	width: 4vmin !important;
-	height: 4vmin !important;
+.getStarted {
+	padding: 1vmin;
+	border-radius: 12px;
+	margin: 2vh auto 0 auto;
+	width: 60%;
+	background-color: #3E85D3;
+}
+.getStarted:hover{
+	cursor: pointer;
+}
+.halfOpacity {
+	opacity: 0.2;
 }
 .hLine {
 	width: 30%;
@@ -185,25 +289,30 @@ body {
 	width: 25vmin;
 	height: 25vmin;
 }
+.iconBox:hover {
+	cursor: pointer;
+}
+.iconBox img{
+	position: absolute;
+	width: 15vmin;
+	height: 15vmin;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.iconContent {
+	font-size: 4vmin;
+	border-radius: 12px;
+	padding: 2vh 5vmin;
+}
 .iconLabel {
 	position: absolute;
 	font-size: 3vmin;
 	width: 100%;
 	bottom: 0;
 	padding: 2vmin;
-}
-.icons {
-	width: 25vmin;
-	height: 25vmin;
-	object-fit: contain;
-}
-.icons img{
-	display: block;
-	margin: 2.5vmin auto 0 auto;
-	vertical-align: middle;
-	width: 15vmin;
-	height: 15vmin;
-	
 }
 .infoBoxLine {
 	display: inline-block;
@@ -215,8 +324,7 @@ body {
 }
 .infoBox {
 	width: 90%;
-	height: 100%;
-	margin: 2vh 0 2vh 0;
+	margin: 2vh auto 2vh auto;
 	padding: 3vh 3vw 3vh 3vw;
 	border: 1px solid #EEE;
 	border-radius: 0.5vmin;
@@ -224,10 +332,11 @@ body {
 	background-color: white;
 }
 .infoBoxAddress {
+	display: inline-block;
 	color: #555;
 	font-weight: bold;
-	font-size: 3.5vmin;
-	line-height: 3.5vmin;
+	font-size: 3vmin;
+	line-height: 3vmin;
 }
 .infoBoxContent {
 	color: #555;
@@ -243,6 +352,12 @@ body {
 	font-size: 3vmin;
 	letter-spacing: 0.1vmin;
 	padding: 1vh 0 1vh 0;
+}
+.infoBoxFooter:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	
 }
 .infoBoxHighlight {
 	color: #666;
@@ -278,6 +393,16 @@ body {
 	font-weight: 100;
 	padding: 0 0 0.5vh 0;
 }
+.learnMore {
+	width: 100%;
+	margin: 2vh auto;
+	color: white;
+	background-color: #0b52a0;
+	border-radius: 25px;
+	font-size: 5vmin;
+	font-weight: 500;
+	padding: 3vh 4vw;
+}
 .leftContainer {
 	display: inline-block;
 	float: left;
@@ -288,6 +413,9 @@ body {
 	display: inline;
 	color: #fdc43e !important;
 }
+.menuNav {
+	border-bottom: 1px solid white;
+}
 .page {
 	position: absolute;
 	width: inherit;
@@ -295,36 +423,50 @@ body {
 }
 .pageSubTitle {
 	color: #999;
-	font-size: 4vmin;
+	font-size: 3.5vmin;
 	font-weight: bold;
 	text-align: left;
+	padding: 2vh 0 0 5vmin;
 }
 .pageTitle {
-	color: #999;
-	font-size: 5vmin;
+	display: block;
+	clear: both;
+	color: white;
+	font-size: 4.5vmin;
 	font-weight: bold;
-	margin-top: 2vh;
+	margin: 0.5vh auto;
+	text-align: left;
+	border-radius: 12px;
+	padding: 3vh 2vmin;
+	background-color: #0b52a0;
 }
 .phoneBox {
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	font-size: 4vmin;
-	letter-spacing: 0.1vmin;
-	padding: 1.5vh 3vw 1.5vh 3vw;
-	border-radius: 1vmin;
-	background-color: #fdc43e;
-	width: 90%;
-	margin: 2vh auto 2vh auto;
-	box-shadow: 0.5vmin 0.5vmin 1vmin #888;
-}
-.phoneBox a {
 	color: inherit;
+	display: inline-block;
+	font-size: 4.5vmin;
+	font-weight: 400;
+	background-color: #3E85D3;
+	border-radius: 12px;
+	color: white !important;
+	float: right !important;
+	text-align: center !important;
+	padding: 1.5vh 2vmin;
+	transform: translate(0,-25%);
+	-ms-transform: translate(0, -25%);
+    -webkit-transform: translate(0, -25%);
+}
+.phoneBox:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.quote {
+	clear: both;
 }
 .rightContainer {
 	display: inline-block;
 	float: right;
 	width: 60%;
+	max-width: 60%;
 	padding: 0 0 0 4vmin;
 	height: 100%;
 }
@@ -332,12 +474,12 @@ body {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 .staffMember {
-	border-top: 1px solid #CCC;
-	padding-top: 1vh;
-	margin: 1vh auto 0 auto;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 1vh;
+	margin: 1vh auto 1vh auto;
 	width: 90%;
 	color: #333;
-	font-size: 3.5vmin;
+	font-size: 3vmin;
 	font-weight: bold;
 	line-height: 5vmin;
 }
@@ -395,11 +537,16 @@ body {
 	z-index: 11;
 }
 #boxContainer {
-	width: 100%;
-	margin: 0 auto 0 auto;
+	margin: 5vh 0;
+}
+#boxContainer img {
+	width: 80%;
+	padding-right: 5%;
+	max-width: 400px;
+	margin: 10vh 0;
 }
 #botMenu {
-	
+	background: linear-gradient(to top, rgba(11,82,160,1), rgba(255,255,255,1));
 }
 #botLeft {
 	position: relative;
@@ -425,15 +572,44 @@ body {
 	margin: 0 auto 0 auto;
 }
 #botTitle {
-	
 	font-size: 3vh;
 	border: 2px solid white;
 	width: 20vw;
 	padding: 1vh 1vh 1.5vh 1vh;
 	margin: 2vh auto 2vh auto;
 }
+#callBackForm {
+	padding-top: 1vh;
+	border-radius: 12px;
+	width: 100%;
+	margin: 2vh auto 0 auto;
+}
+#callBackForm .formBox label {
+	color: white;
+	width: auto;
+}
+#callBackForm .formBox input {
+	float: none;
+	color: black;
+	padding-left: 10px;
+	margin-left: 2vmin!important;
+	width: auto;
+}
+#callBackForm .formBox button {
+	border: none;
+	cursor: pointer;
+}
+#callBackForm .formBox button:hover {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+#caption {
+	height: 25vh;
+	font-style: italic;
+	text-align: center;
+}
 #carelessDrivingBox {
-	background-color: #0b52a0;
+	background-color: green;
 }
 
 #container {
@@ -442,7 +618,6 @@ body {
 	
 }
 #content {
-	
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -459,11 +634,16 @@ body {
 	border-top: 6px solid white;
 }
 #impairedDrivingBox {
-	background-color: #3E85D3;
+	background-color: orange;
+}
+#lastPage {
+	height: unset !important;
+	border-bottom: none;
 }
 #map {
-	width: 40vmin;
-	height: 40vmin;
+	width: 100%;
+	height: 20vh;
+	padding-bottom: 4vmin;
 }
 #menuButton {
 	position: relative;
@@ -488,6 +668,22 @@ body {
 	-ms-user-select: none; 
 	user-select: none;
 }
+#menuImg {
+	margin: 25px 0 0 50px;
+	background-color: white;
+	border-radius: 25px;
+	width: 200px;
+	padding: 25px;
+	object-fit: contain;
+}
+#menuImg:hover{
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+#menuImg img {
+	vertical-align: middle;
+	max-width: 150px;
+}
 #phoneIcon {
 	position: relative;
 	z-index: 10;
@@ -500,12 +696,8 @@ body {
 	background-color: #0b52a0;
 	border: none;
 }
-#phoneIcon img {
-	width: 8vmin;
-	height: 8vmin;
-}
 #sideMenu {
-	position: absolute;
+	position: fixed;
 	display: table;
 	background-color: #0b52a0;
 	z-index: 20;
@@ -534,7 +726,7 @@ body {
 }
 #streetRacingBox {
 	clear: both;
-	background-color: #3E85D3;
+	background-color: purple;
 }
 #title {
 	background-color: #0b52a0;
@@ -553,19 +745,28 @@ body {
 	text-align: center;
 	background-color: #0b52a0;
 }
+#topTop {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
 #trafficTicketsBox {
-	background-color: #0b52a0;
+	background-color: red;
+}
+#vid {
+	margin-top: 5vh;
+	width: 80vmin;
+	height: 45vmin;
 }
 
 /* ---------------------------Portrait Classes-------------------------------- */
 	
 	.botMenuPortrait {
 		position: absolute;
-		top: 70vh;
+		top: 80vh;
 		left: 0;
 		width: 100vw;
 		height: 20vh;
-		background-color: #0b52a0;
 	}
 	.containerPortrait {
 		top: 10vh;
@@ -573,10 +774,11 @@ body {
 		height: 90vh;
 	}
 	.contentPortrait {
-		height: calc(100% - 20vh);
+		height: calc(100% - 10vh);
 	}
 	.menuButtonPortrait {
 	}
+
 	.pageTitlePortrait {
 
 	}
@@ -610,17 +812,23 @@ body {
 	.containerLandscape {
 		top: 0;
 		left: 300px;
-		height: 100vh;
+		height: 2000px;
 	}
 	.contentLandscape {
 		height: 100%;
+		max-width: 1200px !important;
+		margin: 0 auto;
 	}
 	.menuButtonLandscape {
 		display: none !important;
 	}
+	.pageLandscape {
+		/* edit me :) */
+	}
 	.pageTitleLandscape {
 	}
 	.sideMenuLandscape {
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 300px;
@@ -653,6 +861,31 @@ body {
 	
 /* ------------------------------------------------ Class Media Queries ------------------------------------------------- */
 @media screen and (min-width: 800px) {
+	.addressButton {
+		font-size: 24px;
+	}
+	.addressText {
+		font-size: 22px;
+	}
+	.callBackText {
+		font-size: 24px;
+	}
+	.formBox {
+		font-size: 24px;
+		margin: 36px;
+	}
+	.formBox label.error{
+		
+	}
+	.learnMore {
+		font-size: 28px;
+	}
+	.iconContent {
+		font-size: 22px;
+	}
+	.infoBoxFooter {
+		font-size: 14px;
+	}
 	.text2 {
 		font-size: 24px;
 		line-height: 32px;
@@ -661,13 +894,33 @@ body {
 		text-indent: 0;
 		width: 50vw;
 	}
+	.hoursBox {
+		font-size: 20px;
+	}
 	.hLine {
 		width: 50vw;
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.pageSubTitle {
+		font-size: 24px;
+	}
+	.pageTitle {
+		font-size: 28px;
+	}
+	.phoneBox {
+		font-size: 28px;
+	}
+	.staffMember {
+		font-size: 22px;
+	}
+	
 }
 @media screen and (min-width: 450px) and (orientation: portrait) {
+	.formBox {
+		font-size: 24px;
+	}
+	
 	.sideMenuPortrait ul li {
 		font-size: 3vw !important;
 	}
@@ -678,5 +931,8 @@ body {
 	}
 	.contentPortrait {
 		height: 100%;
+	}
+	#map {
+	height: 35vh;
 	}
 }

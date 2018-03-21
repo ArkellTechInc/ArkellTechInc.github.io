@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, width=360, height=640">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, width=320, height=568">
 	<meta name="description" content="High Risk Auto Insurance | Burlington.">
 	<meta name="author" content="Arkell Tech Inc">
 	<title>Sweet Lemons Insurance</title>
@@ -11,106 +11,218 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-
-	
 	<div id="container" class="containerPortrait">
 		<div id="content" class="contentPortrait">
 			<!----------------------- content goes here ----------------------->
 				<!-- Slider main container -->
-				<div class="swiper-container">
+				<div class="swiperFix1 swiper-container">
 					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
+					<div class="swiperFix2 swiper-wrapper">
 						<!-- Slides -->
-						
 						<!-- Page 1 --------------------------------------->
 						<div id="page1" class="swiper-slide">
-							<h1 class="pageTitle">The High Risk Auto Insurance Specialists</h1>
-							<div class="hLine"></div>
-							<div id="boxContainer">
-						
-								<div id="carelessDrivingBox" class="iconBox">
-									<div class="icons"><img src="icons/cdIcon.svg" alt="Careless Driving Icon"></div>
-									<div class="iconLabel">Careless Driving</div>
+							<div class="contentContainer">
+								<h1 class="pageTitle">High Risk Auto Insurance<a href="tel:1-855-447-4750"><div class="phoneBox inLine">Call Now</div></a></h1>
+								<!-- <div class="doodle"><img src="images/doodle1.jpg" alt="car crash doodle" /></div> -->
+								<blockquote class="buttonGradient learnMore">Get your low insurance prices back <div class="faster lemons">faster!</div> Learn more about our <div class="faster lemons">high risk auto insurance programs.</div>
+									<div onclick="toggleCallBack()" id="getStarted" class="getStarted">Click Here to Get Started</div>
+									<form class="displayNone" id="callBackForm">
+										<div class="callBackText">Let us help you find the shortest road to recovery.</div>
+										<div class="formBox">
+											<label>Name*</label>
+											<input type="text" placeholder="John Doe" name="" autofocus="true" required></input>
+										</div>
+										<div class="formBox">
+											<label>Phone*</label>
+											<input type="tel" placeholder="123-456-7890" name="" required></input>
+										</div>
+										<div class="formBox">
+											<button type="submit">Call Me Back</button>
+										</div>
+									</form>
+								</blockquote>
+									<div id="iconContainer">
+										<div id="carelessDrivingBox" class="iconBox" onclick="toggleBox(1)">
+											<svg style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												 width="15vmin" height="15vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<path fill="#FFFFFF" d="M118.56,88.616l7.219-34.351c0,0,2.529-18.155,14.442-20.291c11.914-2.138,175.53-31.479,175.53-31.479
+												s13.502-2.421,20.862,12.467c7.361,14.889,15.65,30.464,15.65,30.464l38.124-6.837c0,0,24.697,10.926,4.097,24.858
+												c-20.6,13.931-20.6,13.931-20.6,13.931l21.791,13.153c0,0,9.966,5.891,12.151,19.147c2.185,13.258,14.087,90.459,14.087,90.459
+												s2.707,11.457-7.619,13.309c-10.325,1.852-36.536,6.552-36.536,6.552s-10.326,1.853-11.417-4.776
+												c-1.093-6.629-3.278-19.885-3.278-19.885l-206.506,37.031l2.868,17.401c0,0,3.09,8.829-4.059,10.109
+												c-7.147,1.283-41.301,7.409-41.301,7.409s-8.873,0.736-10.511-9.206c-1.639-9.943-16.384-99.43-16.384-99.43
+												s8.799-16.081,17.349-28.704c8.55-12.624,5.558-5.973-3.738-7.79c-9.293-1.816-28.765-0.884-22.896-19.851
+												c3.016-6.513,3.016-6.513,3.016-6.513L118.56,88.616z M344.446,72.42c0,0-10.63-19.846-19.853-36.108
+												c-9.221-16.26-21.724-12.738-21.724-12.738s-132.64,23.787-144.554,25.923c-11.915,2.137-14.104,14.898-14.104,14.898l-6.67,45.128
+												L344.446,72.42z M146.364,153.266c-19.199-2.254-36.512-4.798-34.659,10.37c2.346,19.2,6.619,20.31,15.341,18.662
+												c8.724-1.65,38.111-6.92,38.111-6.92s12.981-0.622,11.07-12.223c-1.912-11.599-5.257-8.089-14.482-8.491
+												C156.7,154.442,151.465,153.863,146.364,153.266 M332.881,146.152c0,0,38.918-6.979,48.45-8.688
+												c9.531-1.709,8.39-12.97,6.095-21.941c-2.296-8.973-16.217-8.469-16.217-8.469l-41.282,18.685
+												C317.863,139.374,332.881,146.152,332.881,146.152z"/>
+												<g><path fill="none" stroke="#FFFFFF" stroke-width="30" stroke-miterlimit="10" d="M140.366,285.243
+												c7.68,52.1-74.787,64.257-67.106,116.356c7.68,52.099,90.147,39.941,97.828,92.04"/></g>
+												<g><path fill="none" stroke="#FFFFFF" stroke-width="30" stroke-miterlimit="10" d="M403.091,239.845
+												c7.681,52.098-74.786,64.256-67.105,116.355s90.147,39.94,97.828,92.039"/></g>
+											</svg>
+											<div class="iconLabel">Careless Driving</div>
+										</div>
+										<div id="impairedDrivingBox" class="iconBox" onclick="toggleBox(2)">
+											<svg style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15vmin"
+												height="15vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<g id="Layer_2">
+												<path fill="#FFFFFF" d="M127.143,114.693c68.401-47.917,102.11,16.63,102.11,16.63c42.191-8.496,64.827,37.537,64.827,37.537
+												c41.31,35.586,5.66,63.14,5.66,63.14l-69.396,255.724C86.906,494.671,3.736,426.231,3.736,426.231l69.397-255.728
+												C64.766,103.53,127.143,114.693,127.143,114.693z M281.376,209.662c27.004-1.518-4.151-33.688-4.151-33.688
+												c-9.996-36.652-58.541-29.253-58.541-29.253c-41.34-59.968-83.442-10.989-83.442-10.989c-41.842-9.138-39.624,23.523-39.624,23.523
+												L281.376,209.662z M22.217,421.128c113.304,51.558,184.32,48.37,184.32,48.37l64.1-236.208L88.209,183.785L22.217,421.128z
+												 M94.267,223.03L42.646,413.255c0,0,64.956,37.748,156.566,42.487l51.622-190.227l-124.637-33.823l-27.483,87.65
+												c0,0-20.41,16.576-14.819-4.023c7.267-26.781,22.346-89.042,22.346-89.042L94.267,223.03z"/>
+												<rect x="239.747" y="30.031" transform="matrix(0.0704 -0.9975 0.9975 0.0704 214.1671 314.3569)" fill="#FFFFFF" width="72" height="24.478"/>
+												<rect x="305.95" y="45.233" transform="matrix(0.5338 -0.8456 0.8456 0.5338 112.1234 315.2478)" fill="#FFFFFF" width="72" height="21.42"/>
+												<rect x="178.936" y="44.825" transform="matrix(-0.49 -0.8717 0.8717 -0.49 272.0201 269.8275)" fill="#FFFFFF" width="72.001" height="21.042"/></g>
+												<g id="Layer_4">
+												<path fill="#FFFFFF" d="M298.761,142c-30.237-9.435-3.85-22.182-3.85-22.182l76.185-20.828c24.248,7.755,0.762,23.027,0.762,23.027
+												l47.75,170.617c9.829-0.477,11.985,3.361,11.985,3.361l16.827-35.582c-8.904-16.373,10.568-13.953,10.568-13.953
+												s17.51,7.385,34.521,16.995c17.011,9.612-11.753,17.721-11.753,17.721l-17.858,35.862c40.849,56.325-0.496,107.459-0.496,107.459
+												s15.266,11.317,28.007,25.538c12.737,14.22-4.579,15.636-4.579,15.636s-49.415,13.51-91.625,25.051
+												c-42.21,11.537-31.769-2.381-31.769-2.381l9.113-39.004c-99.729-61.251-26.831-137.609-26.831-137.609L298.761,142z
+												 M419.979,439.69c72.065-19.701,49.369-86.522,49.369-86.522l-135.893,37.15C333.456,390.318,347.915,459.392,419.979,439.69z
+												 M427.872,409.871c-5.403,1.479-8.586,7.056-7.109,12.455c1.478,5.401,7.055,8.583,12.456,7.107
+												c5.4-1.479,8.582-7.055,7.106-12.457C438.849,411.578,433.271,408.395,427.872,409.871z M400.175,427.954
+												c-2.275,0.622-3.615,2.971-2.994,5.245c0.623,2.273,2.972,3.613,5.244,2.992c2.274-0.622,3.615-2.969,2.995-5.243
+												C404.796,428.675,402.448,427.333,400.175,427.954z M405.878,389.33c-2.674,0.73-4.244,3.488-3.515,6.157
+												c0.729,2.673,3.486,4.247,6.159,3.516c2.672-0.729,4.242-3.487,3.513-6.161C411.306,390.173,408.548,388.599,405.878,389.33z
+												 M421.622,372.854c-1.989,0.545-3.162,2.599-2.618,4.588c0.547,1.992,2.599,3.164,4.59,2.619c1.988-0.545,3.163-2.597,2.619-4.589
+												C425.668,373.48,423.612,372.31,421.622,372.854z M434.043,392.026c-3.703,1.012-5.884,4.836-4.872,8.538
+												c1.012,3.703,4.834,5.881,8.538,4.869c3.702-1.01,5.885-4.832,4.871-8.537C441.568,393.195,437.747,391.016,434.043,392.026z
+												 M448.017,402.615c-1.991,0.546-3.162,2.6-2.618,4.589c0.544,1.993,2.597,3.164,4.589,2.619c1.989-0.543,3.162-2.601,2.617-4.59
+												C452.061,403.244,450.007,402.072,448.017,402.615z"/>
+												</g>
+											</svg>
+											<div class="iconLabel">Impaired Driving</div>
+										</div><br />
+										<div id="streetRacingBox" class="iconBox" onclick="toggleBox(3)">
+											<svg style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15vmin"
+												height="15vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<g id="Layer_2">
+												<path fill="#FFFFFF" d="M214.069,334.676l-24-0.044c0,0-3.482-10.007-6.465-19.513c-2.983-9.505-11.483-9.521-11.483-9.521
+												s-102.999-0.187-110.499-0.2s-10.894,10.355-10.894,10.355l-7.91,19.359l-23.75,0.207c0,0,0,0-2.506,3.496
+												c-5.52,10.49,6.479,12.012,11.975,14.063s8.002-1.527,1.491,4.962c-6.511,6.486-13.527,14.975-13.527,14.975
+												s-0.098,53.999-0.109,59.999s5.488,6.511,5.488,6.511s21.5,0.039,26,0.047c4.5,0.009,3.51-5.493,3.51-5.493l0.019-10.5
+												l129.999,0.236c0,0-0.014,8-0.021,12c-0.007,4,6.493,4.012,6.493,4.012s16.5,0.03,23,0.042s6.013-6.989,6.013-6.989
+												s0.584-46.498,0.599-54.499c0.015-8-5.477-12.51-5.477-12.51l-11.981-10.021c0,0,0,0,14.011-5.975S214.069,334.676,214.069,334.676
+												z M62.466,390.9c0,0-18.5-0.034-24,0.006c-5.5,0.039-7.998-1.064-7.477-12.564c0.412-9.084,10.735-5.755,22.241-2.395
+												c3.057,0.894,6.198,1.788,9.259,2.453c5.598,1.215,8-0.485,7.988,6.514C70.465,391.914,62.466,390.9,62.466,390.9z M99,373
+												l5.358-23.524l-52.066-0.095l8.672-25.734c0,0,2.638-7.245,10.138-7.231c7.5,0.015,91,0.165,91,0.165s8.001-0.734,11.982,9.772
+												c3.981,10.508,8.458,23.266,8.458,23.266l-50.541-0.093L138,373H99z M204.425,379.438c0.489,5.501,0.041,12.22-5.959,12.209
+												c-6.001-0.011-30.5-0.056-30.5-0.056s-8.49-5.567,0.272-12.275l27.137-6.563C195.375,372.753,203.935,373.938,204.425,379.438z"/>
+												<path fill="#FFFFFF" d="M487.069,334.676l-24-0.044c0,0-3.482-10.007-6.465-19.513c-2.983-9.505-11.483-9.521-11.483-9.521
+												s-102.999-0.187-110.499-0.2s-10.894,10.355-10.894,10.355l-7.91,19.359l-23.751,0.207c0,0,0,0-2.507,3.496
+												c-5.52,10.49,6.479,12.012,11.975,14.063s8.003-1.527,1.491,4.962c-6.511,6.486-13.527,14.975-13.527,14.975
+												s-0.099,53.999-0.108,59.999c-0.012,6,5.487,6.511,5.487,6.511s21.501,0.039,26,0.047c4.5,0.009,3.511-5.493,3.511-5.493
+												l0.019-10.5l129.999,0.236c0,0-0.014,8-0.021,12c-0.007,4,6.493,4.012,6.493,4.012s16.5,0.03,23,0.042s6.013-6.989,6.013-6.989
+												s0.584-46.498,0.599-54.499c0.015-8-5.477-12.51-5.477-12.51l-11.981-10.021c0,0,0,0,14.011-5.975S487.069,334.676,487.069,334.676
+												z M335.467,390.9c0,0-18.5-0.034-24,0.006c-5.5,0.039-7.998-1.064-7.478-12.564c0.411-9.084,10.735-5.755,22.241-2.395
+												c3.057,0.894,6.198,1.788,9.259,2.453c5.598,1.215,8.001-0.485,7.987,6.514C343.465,391.914,335.467,390.9,335.467,390.9z M398,373
+												v-23.486l-11-0.021V373h-15l5.4-23.524l-52.108-0.095l8.672-25.734c0,0,2.638-7.245,10.138-7.231c7.5,0.015,91,0.165,91,0.165
+												s8.001-0.734,11.982,9.772c3.981,10.508,8.458,23.266,8.458,23.266l-47.93-0.087L413,373H398z M477.425,379.438
+												c0.489,5.501,0.041,12.22-5.959,12.209c-6.001-0.011-30.5-0.056-30.5-0.056s-8.49-5.567,0.272-12.275l27.137-6.563
+												C468.375,372.753,476.935,373.938,477.425,379.438z"/></g>
+												<g id="Layer_3">
+												<path fill="#FFFFFF" d="M234.333,167.666L227,152.999c-22,0.667-66,4.667-100.667,40.667s-52,27.333-52,27.333l-14.667-66
+												c0,0-26.667-33.333-33.333-41.333s-8.617-10.667,3.333-14S62.333,82.999,83,58.332s84.667-30,84.667-30
+												C175,8.999,189,24.999,189,24.999l54.667,118.667L234.333,167.666z M189.667,70.999c-13.333,0-35.333,5.333-35.333,5.333
+												L171,113.666c10.667-4.667,35.333-5.333,35.333-5.333L189.667,70.999z M140.333,45.666c0,0-30,8-37.333,16.667l14,30
+												c0,0,22.959-13.022,37.333-16L140.333,45.666z M117,92.332c-16,4-33.333,28.016-33.333,28.016L99,157.666l33.338-27.333L117,92.332
+												z M99,157.666l-19.333,17.333l7.333,32c10-4.667,28-19.333,28-19.333L99,157.666z M68.333,92.332c-12.667,12-26,17.333-26,17.333
+												l22,27.333l19.333-16.651L68.333,92.332z M187,144.332l-16-30.667c-18.656,4.09-38.662,16.667-38.662,16.667l15.996,30.667
+												C159,148.999,187,144.332,187,144.332z"/>
+												<path fill="#FFFFFF" d="M258.009,143.666l54.667-118.667c0,0,14-16,21.333,3.333c0,0,64,5.333,84.667,30
+												c20.666,24.667,41.382,38,53.333,41.333c11.95,3.333,10,6,3.333,14c-6.666,8-33.333,41.333-33.333,41.333l-14.667,66
+												c0,0-17.333,8.667-52-27.333c-34.666-36-78.666-40-100.666-40.667l-7.334,14.667L258.009,143.666z M295.342,108.332
+												c0,0,24.668,0.667,35.334,5.334l16.666-37.334c0,0-22-5.333-35.333-5.333L295.342,108.332z M347.342,76.332
+												c14.375,2.978,37.334,16,37.334,16l14-30c-7.333-8.667-37.334-16.667-37.334-16.667L347.342,76.332z M369.338,130.332
+												l33.338,27.334l15.333-37.318c0,0-17.333-24.016-33.333-28.016L369.338,130.332z M386.676,187.666c0,0,18,14.666,28,19.333
+												l7.333-32l-19.333-17.333L386.676,187.666z M418.009,120.348l19.333,16.651l22-27.333c0,0-13.333-5.334-26-17.334L418.009,120.348z
+												 M353.342,160.999l15.996-30.667c0,0-20.006-12.576-38.662-16.666l-16,30.666C314.676,144.332,342.676,148.999,353.342,160.999z"/>
+												<path fill="#FFFFFF" d="M200.333,266.332c-0.667,19.333,14.667,8.667,14.667,8.667l35-71.333l35.667,70.667
+												c16.667,11.333,14-8.666,14-8.666l-49.667-104"/>
+												</g>
+											</svg>
+											<div class="iconLabel">Street Racing</div>
+										</div>
+										<div id="trafficTicketsBox" class="iconBox" onclick="toggleBox(4)">
+											<svg style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="15vmin" height="15vmin" viewBox="0 0 500 500" enable-background="new 0 0 500 500" xml:space="preserve">
+												<g id="Layer_2"><g>
+												<path fill="#FFFFFF" d="M264,285c0,0-7.797,6.57,0,9.5h100c0,0,8.022-5.545,0-9.5S264,285,264,285z"/>
+												<path fill="#FFFFFF" d="M337,301.5h-73c-7.797,4.07,0,11,0,11h73C349.661,307.5,337,301.5,337,301.5z"/>
+												<path fill="#FFFFFF" d="M382.531,134c-35.028,0-85.531,0-85.531,0s3.045-19.936-2.604-26.151c0,0,27.685-51.463-5.649-63.893
+												C255.413,31.526,232.813,23,232.813,23H180l-50.576,18.747c0,0-40.113,15.129-7.345,68.237c0,0-7.828,30.958,5.565,52.736
+												c0,0-49.645,10.98-49.645,51.659C77.999,255.059,78,326,78,326s9.779,48.266,49.968,48.266c0,0-2.624,14.125,10.936,28.813
+												c13.56,14.688,64.469,65.537,64.469,65.537s48.62,26.622,69.523-24.227c0,0,17.545-1.391,55.397-47.391H379
+												c0,0,42,0.995,42-39.118S421,173,421,173S417.56,134,382.531,134z M143.571,66.583C157.696,60.933,181.966,51,181.966,51H233
+												l39.361,16.736c0,0,10.17,2.135,2.824,16.824c-7.345,14.689-10.17,16.057-16.949,16.189c-6.778,0.132-97.646-0.482-97.646-0.482
+												s-11.912,3.508-16.996-8.356C138.51,80.047,129.447,72.233,143.571,66.583z M212.475,185.5C140.158,186.065,143.808,111,153,108
+												h111C264,108,284.791,184.935,212.475,185.5z M246.373,190L226,210v31.497l-15.686,7.72L130.222,190H246.373z M136.769,348
+												C106.26,348,106,316,106,316v-98l73,55v75C179,348,167.277,348,136.769,348z M238.463,444.887c-9.604,9.604-18.644,0-18.644,0
+												s-48.588-47.457-57.063-55.932s-7.344-16.949,2.825-26.555c10.169-9.604,19.774,0,19.774,0s49.717,47.458,58.757,56.055
+												C253.152,427.052,248.068,435.282,238.463,444.887z M266.771,416.073c-9.545,6.215-16.771-1.694-16.771-1.694L185.356,347.5
+												c0,0,1.695-44.421,2.941-64.75s14.008-21.479,14.008-21.479L250,242.062c0,0,19.193-9.231,27.445,6.905
+												c8.253,16.137-10.674,23.604-10.674,23.604l-40.738,16.949c0,0-0.565,36.725,1.13,60.453
+												c1.695,23.728,20.621,25.988,20.621,25.988l62.43-1.131C310.215,374.83,276.316,409.858,266.771,416.073z M362,268h-78.904
+												C295.523,219,246,235,246,235v-16c0,0,25.547,0.233,35.15,0.233c9.604,0,10.859-9.125,10.859-9.125L293,173c0,0,75.972,0,82.751,0
+												s5.249,6,5.249,6s0,159.673,0,168.5s-6,9.5-6,9.5s-107.725,0-119.021,0c-11.298,0-9.604-9.094-9.604-9.094l0.127-56.316L274,278
+												h88C368.119,272,362,268,362,268z M394,353c0,0,0.146,15.615-17.368,16.182c-17.514,0.565-126.757,0-126.757,0
+												s-13.771-1.695-15.165-17.515s-0.048-55.367-0.048-55.367l5.338-3.954V352c0,0,2.067,10,11,10c8.934,0,125,0,125,0
+												s9.921-1.044,9.921-9.52c0-8.475,0.565-176.396,0.565-176.396s-1.695-9.102-7.91-9.102s-89.83,0.534-89.83,0.534l-48.023,46.877
+												l0.565,21.461l-7.094,5.081l0.874-28.106L285.921,161H379c0,0,15,0.271,15,19.48S394,353,394,353z"/>
+												<path fill="#FFFFFF" d="M346.938,325.027c-9.938-12.527-12.43-7.995-16.948,0c-4.52,7.994-0.564,9.125-4.521,7.994
+												c0,0-2.824-8.474-6.778-6.778c-3.955,1.694-2.824,2.823,0,11.299c2.823,8.476,7.344,15.255,12.429,5.649
+												c5.085-9.604,6.633-22.28,11.509-14.248c4.876,8.033,9.396,13.068,17.87,8.009s14.688-15.111,3.39-10.933
+												C352.59,330.197,356.875,337.555,346.938,325.027z"/></g>
+												<path fill="#FFFFFF" d="M224.904,71.441C219.254,61.667,227,60.827,225,59.333c-6.428-4.801-5.746-4.281-5.746-4.281
+												s-2.61,7.914-12.322,0.004c0,0-7.452,9.04-12.537,0l-6.78,5.084c0,0,4.52,7.91,0,12.995c-0.565,6.214,5.864,15.254,19.316,23.164
+												C206.932,96.299,232.325,84.28,224.904,71.441z M214,76v9l-7.259-3.968l-7.24,3.941l0.482-9.37l-5.619-4.728l8.49-1.13l3.89-6.529
+												L213,71h6.254L214,76z"/></g>
+											</svg>
+											<div class="iconLabel">Traffic Tickets</div>
+										</div>
+										<div class="iconContent displayNone">
+											<div id="carelessDrivingContent">Hey it's more information on Careless Driving. Wow.</div>
+											<div id="impairedDrivingContent">Hey it's more information on Impaired Driving. Wow.</div>
+											<div id="streetRacingContent">Hey it's more information on Street Racing. Wow.</div>
+											<div id="trafficTicketsContent">Hey it's more information on Traffic Tickets. Wow.</div>
+										</div>
+									</div>
 								</div>
-							
-								<div id="impairedDrivingBox" class="iconBox">
-									<div class="icons"><img src="icons/idIcon.svg" alt="Impaired Driving Icon"></div>
-									<div class="iconLabel">Impaired Driving</div>
-								</div><br />
-							
-								<!-- 2 elements per line-->
-							
-								<div id="streetRacingBox" class="iconBox">
-									<div class="icons"><img src="icons/srIcon.svg" alt="Street Racing Icon"></div>
-									<div class="iconLabel">Street Racing</div>
-								</div>
-							
-								<div id="trafficTicketsBox" class="iconBox">
-								
-									<div class="icons"><img src="icons/ttIcon.svg" alt="Traffic Tickets Icon"></div>
-									<div class="iconLabel">Traffic Tickets</div>
-								</div>
-							
 							</div>
-							<div class="hLine"></div>
-						</div>
-						
-						<!-- Page 2 --------------------------------------->
-						<div id="page2" class="swiper-slide">
-							<h1 class="pageTitle">Why am I a High Risk Driver?</h1>
-							<div class="infoBoxLine">
-								<div class="infoBox">
-									<div class="infoBoxTitle">Speeding</div>
-									<div class="infoBoxContent">1-15km/h</a>.</div>
-									<div class="infoBoxHighlight">$17.50 - $52.50<br />0 Demerit Points</div>
-									<a href=""><div class="infoBoxLink">Read more on speeding.</div></a>
-									<a href="http://ontariospeeding.com/speeding-ticket-penalties/speeding-ticket-fines/"><div class="infoBoxFooter">A detailed breakdown of speeding ticket costs</div></a>
-								
+							<!-- Page 2 --------------------------------------->
+							<div id="page2" class="swiper-slide">
+								<div class="contentContainer">
+									<h1 class="pageTitle">30 Second Breakdown<a href="tel:1-855-447-4750"><div class="phoneBox inLine">Call Now</div></a></h1>
+									<iframe id="vid" src="https://www.youtube.com/embed/xKG1bKg4ksY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									<div class="infoBox" id="caption">
+										<div class="infoBoxContent">"A couple of driving mistakes can really sour your car insurance rates. Sweet Lemons Insurance introduced Kate to their driver therapy program..."</div>
+									</div>
 								</div>
 							</div>
-							<div class="didYouKnowBox">
-								<div class="didYouKnow">Going faster?</div>
-									<ul>
-										<li>1-15km/h</li>
-										<li>16-29km/h</li>
-										<li>30-49km/h</li>
-										<li>50+km/h</li>
-										<li>Fighting a ticket</li>
-									</ul>
+							<!-- Page 3 --------------------------------------->
+							<div id="page3" class="swiper-slide">
+								<div class="contentContainer">
+									<h1 class="pageTitle">Page 3<a href="tel:1-855-447-4750"><div class="phoneBox inLine">Call Now</div></a></h1>
+								</div>
 							</div>
-							<div class="phoneBox"><a href="tel:1-855-447-4750">Call us for a FREE QUOTE: 1-855-HI-RISK-0</a></div>
 						</div>
-						
-						<!-- Page 3 --------------------------------------->
-						<div id="page3" class="swiper-slide">
-							<br>
-							Heyyyy woah look i'm a page 3
-						</div>
-						
+						<!-- Pagination buttons -->
+						<div class="swiper-pagination"></div>
 					</div>
-					
-					<!-- Pagination buttons -->
-					<div class="swiper-pagination"></div>
-					
-				</div>
 			<!----------------------- content ends here ----------------------->
 		</div>
-		
-		
-		<div id="botMenu" class="botMenuPortrait">
-			<div id="botLeft">
-				<div id="botTitle">Home Page</div>
-				<div id="botSubTitle">High Risk Auto Insurance Specialists<br />1/5</div>
-			</div>
-			<div id="botRight"></div>		
+		<div id="botMenu" class="botMenuPortrait">		
 		</div>
-		
-		
 		<div id="blackBox" onclick="hideMenu()"></div>
-	
 	</div>
-	
-	
 	<div id="sideMenu" class="sideMenuPortrait">
 		<ul>
 			<a href=""><li id="sideMenuTitle" class="sideMenuTitlePortrait">Sweet<div class="lemons">Lemons</div>Insurance</li></a>
@@ -123,20 +235,23 @@
 			<a href=""><li class="subMenu">Traffic Tickets</li></a>
 			<a href=""><li>Blog</li></a>
 			<a href=""><li>Contact Us</li></a>
+			<a href="https://www.youngsinsurance.ca/site/home" target="_blank"><li id="menuImg"><img src="images/youngsLogo.jpg" alt="youngs insurance logo"></li></a>
 		</ul>
 	</div>
 	<div id="topMenu" class="topMenuPortrait">
 		<button id="menuButton" class="menuButtonPortrait" onclick="toggleMenu()">I I I</button>
 		<a href="tel:1-855-447-4750">
-			<button id="phoneIcon" onclick="togglePhone()"><img src="icons/phoneIcon.svg" alt="Phone Icon"></button></a>
+			<button id="phoneIcon" onclick="togglePhone()">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="8vmin" height="8vmin" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+				<g><path d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0C114.625,0,0,114.625,0,256   s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375   c-3.375-10.062-14.5-20.562-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.405,8.5l-13.688,13.688   c-49.75-13.469-88.781-52.5-102.219-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5   c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5   c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.345,173.156,70.781   c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.062,402.062,351.656,398.719,341.594z" fill="#FFFFFF"/></g>
+				</svg>
+			</button>
+		</a>
 	</div>
 	<div id="topTitle" class="topTitlePortrait">
 		<button id="title" onclick="sendHome()">Sweet<div class="lemons">Lemons</div>Insurance</button>
 	</div>
-	
-	
 	<script type="text/javascript" src="swiper/js/swiper.min.js"></script>
 	<script type="text/javascript" src="scripts/dopamine.js"></script>
 </body>
-
 </html>

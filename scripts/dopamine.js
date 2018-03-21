@@ -17,19 +17,33 @@ var portraitBool = true;
 var currentOrientation = "Portrait";
 var portraitQuery = window.matchMedia("(orientation: portrait)");
 
+//-- Call Back Check -----
+var callBackOff = true;
+var xMark = "\u2716";
+
 //-- Document is ready :0 ---------------
 $(document).ready(function(){
-	portraitQuery.addListener(portraitUpdate); // Attach listeners to trigger updates on state changes
-	portraitUpdate(portraitQuery);             // Call update functions once at run time
+	// Attach listeners to trigger updates on state changes
+	portraitQuery.addListener(portraitUpdate); 
+	// Call update functions once at run time, Swiper is now initialized here
+	portraitUpdate(portraitQuery);
 	updateMenu(); 
-	menuProgress = menuTarget;                 //Prevent animation from running if site is loaded on desktop
+	//Prevent animation from running if site is loaded on desktop
+	menuProgress = menuTarget;
 	
-	 //Initialize Swiper
-		mySwiper = new Swiper ('.swiper-container', {
+
+
+});
+
+function initSwiper(){
+	mySwiper = new Swiper ('.swiper-container', {
 		// Optional parameters
 		direction: 'horizontal',
-		resistanceRatio: 0.5,
-		
+		longSwipesRatio: 0.35,
+		keyboard: {
+			enabled: true,
+		},
+		mousewheel: true,
 		// If we need pagination
 		pagination: {
 		  el: '.swiper-pagination',
@@ -37,9 +51,7 @@ $(document).ready(function(){
 		
 
 	});
-
-});
-
+}
 
 function portraitUpdate(portraitQuery) {
 	portraitBool = portraitQuery.matches;
@@ -58,13 +70,11 @@ function switchLayout(){
 	switchOrientation(currentOrientation);
 }
 
-
 function switchOrientation(mode) {
 	//mode must be "Portrait" or "Landscape"
 	//Switch classes
 	for (i = 0; i < elements.length; i++){
 		if ($("#" + elements[i]).length > 0){
-			console.log("heeaih" + elements[i] + " SEEMS TO EXIST XD");
 			$("#" + elements[i]).removeClass();
 			$("#" + elements[i]).addClass(elements[i] + mode);//Set corresponding class by concatenating the name with mode
 		} else {
@@ -75,15 +85,62 @@ function switchOrientation(mode) {
 	
 	switch (mode) {
 		case "Portrait": 
+			//Responsive anim tings go here
 			hideMenu();
-			//Other responsive anim tings go here
+			
+			window.scrollTo(0, 0); //scrolls to top
+			$(".swiperFix1").addClass("swiper-container");
+			$(".swiperFix2").addClass("swiper-wrapper");
+			//Enable pagination
+			if(mySwiper == undefined){
+				initSwiper();
+			}
+			
+			//Prevent vertical scrolling
+			$("body").css("overflow-y", "hidden");
+			
+			togglePaginationClasses(mode);
+			
+			
 			break;
 		case "Landscape":
+			//Responsive anim tings go here
 			showMenu();
-			//Other responsive anim tings go here
+			$(".swiperFix1").removeClass("swiper-container");
+			$(".swiperFix2").removeClass("swiper-wrapper");
+			
+			//Disable pagination
+			if(mySwiper != undefined){
+				mySwiper.destroy();	
+			}
+			mySwiper = undefined;
+			
+			//Allow vertical scrolling
+			$("body").css("overflow-y", "auto");
+			
+			togglePaginationClasses(mode);
+			
 			break;
 	}
 	
+}
+
+function togglePaginationClasses(mode){
+	//pages must have id "page1", "page2", etc
+	var pageNum = 1;
+	while($("#page" + pageNum).length > 0) { //while there exists a page
+		switch(mode){
+			case "Portrait": 
+				$("#page" + pageNum).removeClass();
+				$("#page" + pageNum).addClass("swiper-slide");
+				break;
+			case "Landscape":
+				$("#page" + pageNum).removeClass();
+				$("#page" + pageNum).addClass("pageLandscape");
+				break;
+		}
+		pageNum++;
+	}
 }
 
 
@@ -152,6 +209,14 @@ function updateMenu(){
 		mySwiper.update();
 	}
 }
+function goToDir() {
+	if(mySwiper != undefined){
+				mySwiper.slideTo(2);
+			}
+			else
+				document.getElementById("page3").scrollIntoView({behavior: "smooth"}); 
+			
+}
 
 
 // -- Pagination Functions ------------------------------------------------
@@ -168,3 +233,105 @@ function pageStyleUpdate() {
 			break;
 	}
 }
+function toggleCallBack() {
+	$("#getStarted").toggleClass("seeMore");
+	$("#iconContainer").toggle(400);
+	$("#callBackForm").toggle(400);
+	if($("#getStarted").hasClass("seeMore")){
+		$("#getStarted").text(xMark);
+	} else {
+		$("#getStarted").text("Click Here to Get Started");
+	}
+	
+}
+// Makes the boxes all animated and stuff
+function toggleBox(index){
+	//check to see if the icon box or content is animating
+	if($(".iconBox").is(":animated") || $(".iconContent").is(":animated")){
+		return false;
+	} else {
+		//quick disappear if toggling off
+		if($(".iconContent").is(":visible")){
+			$(".iconContent").toggle();
+		} else {
+			//slow appear
+			$(".iconContent").delay(500).fadeToggle(400);
+		}
+		//toggles the boxes that aren't clicked, and show the neccessary content the other content
+		switch(index){
+			case 1: 
+				$(".iconContent").css("backgroundColor", $("#carelessDrivingBox").css("backgroundColor"));
+				$("#carelessDrivingBox").show(400);
+				$("#impairedDrivingBox").toggle(400);
+				$("#streetRacingBox").toggle(400);
+				$("#trafficTicketsBox").toggle(400);
+				$("#carelessDrivingContent").show();
+				$("#impairedDrivingContent").hide();
+				$("#streetRacingContent").hide();
+				$("#trafficTicketsContent").hide();
+				break;
+			case 2: 
+				$("#carelessDrivingBox").toggle(400);
+				$("#impairedDrivingBox").show(400);
+				$(".iconContent").css("backgroundColor", $("#impairedDrivingBox").css("backgroundColor"));
+				$("#streetRacingBox").toggle(400);
+				$("#trafficTicketsBox").toggle(400);
+				$("#carelessDrivingContent").hide();
+				$("#impairedDrivingContent").show();
+				$("#streetRacingContent").hide();
+				$("#trafficTicketsContent").hide();
+				break;
+			case 3: 
+				$("#carelessDrivingBox").toggle(400);
+				$("#impairedDrivingBox").toggle(400);
+				$("#streetRacingBox").show(400);
+				$(".iconContent").css("backgroundColor", $("#streetRacingBox").css("backgroundColor"));
+				$("#trafficTicketsBox").toggle(400);
+				$("#carelessDrivingContent").hide();
+				$("#impairedDrivingContent").hide();
+				$("#streetRacingContent").show();
+				$("#trafficTicketsContent").hide();
+				break;
+			case 4: 
+				$("#carelessDrivingBox").toggle(400);
+				$("#impairedDrivingBox").toggle(400);
+				$("#streetRacingBox").toggle(400);
+				$("#trafficTicketsBox").show(400);
+				$(".iconContent").css("backgroundColor", $("#trafficTicketsBox").css("backgroundColor"));
+				$("#carelessDrivingContent").hide();
+				$("#impairedDrivingContent").hide();
+				$("#streetRacingContent").hide();
+				$("#trafficTicketsContent").show();
+				
+				break;
+		}
+	}
+}
+// JQuery Form Validation Dongle
+$("#contactForm").validate(
+      {
+        rules: 
+        {
+          fullname: 
+          {
+            required: true
+          },
+          email: 
+          {
+            required: true,
+            email: true
+          }
+        },
+        messages: 
+        {
+          fullname: 
+          {
+            required: "Please enter your name"
+          },
+          email: 
+          {
+            required: "Please enter an email."
+          }
+		}
+	}
+);
