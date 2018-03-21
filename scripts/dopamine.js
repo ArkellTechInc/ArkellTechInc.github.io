@@ -319,7 +319,3 @@ function toggleBox(index){
 		}
 	}
 }
-$(":input").focus(function() {
-    var height = $(":input").css('height');
-    $(":input").css('height', height);
-});
