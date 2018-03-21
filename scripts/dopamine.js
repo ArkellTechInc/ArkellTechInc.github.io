@@ -14,7 +14,7 @@ var menuWidth = 300;
 //-- Media query handling -------------------------------------------------
 
 var portraitBool = true;
-var widthBool = false;
+var widthBool = true;
 var currentOrientation = "Portrait";
 var portraitQuery = window.matchMedia("(orientation: portrait)");
 var widthQuery = window.matchMedia("(min-width: 800px)");
