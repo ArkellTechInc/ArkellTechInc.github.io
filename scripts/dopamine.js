@@ -32,7 +32,6 @@ $(document).ready(function(){
 	
 	// Call update functions once at run time, Swiper is now initialized here
 	portraitUpdate(portraitQuery);
-	widthUpdate(widthQuery);
 	updateMenu(); 
 	//Prevent animation from running if site is loaded on desktop
 	menuProgress = menuTarget;
@@ -74,7 +73,7 @@ function switchLayout(){
 	//Determines layout to switch to based on portraitBool, then switches to it
 	if (portraitBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
-	} else if(widthBool){
+	} if(widthBool){
 		currentOrientation = "Landscape";
 	}
 
