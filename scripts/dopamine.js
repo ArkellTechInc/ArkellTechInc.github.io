@@ -88,8 +88,8 @@ function switchOrientation(mode) {
 			//Responsive anim tings go here
 			hideMenu();
 			
-			//window.scrollTo(0, 0); //scrolls to top
-			window.scrollTo(0,$(document).height()-$(window).height());
+			window.scrollTo(0, 0); //scrolls to top
+			// window.scrollTo(0,$(document).height()-$(window).height()); //scrolls to bottom
 			$(".swiperFix1").addClass("swiper-container");
 			$(".swiperFix2").addClass("swiper-wrapper");
 			//Enable pagination
