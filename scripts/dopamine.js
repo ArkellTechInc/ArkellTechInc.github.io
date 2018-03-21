@@ -88,7 +88,8 @@ function switchOrientation(mode) {
 			//Responsive anim tings go here
 			hideMenu();
 			
-			window.scrollTo(0, 0); //scrolls to top
+			//window.scrollTo(0, 0); //scrolls to top
+			window.scrollTo(0,$(document).height()-$(window).height());
 			$(".swiperFix1").addClass("swiper-container");
 			$(".swiperFix2").addClass("swiper-wrapper");
 			//Enable pagination
@@ -97,7 +98,7 @@ function switchOrientation(mode) {
 			}
 			
 			//Prevent vertical scrolling
-			$("body").css("overflow-y", "hidden");
+			//$("body").css("overflow-y", "hidden");
 			
 			togglePaginationClasses(mode);
 			
