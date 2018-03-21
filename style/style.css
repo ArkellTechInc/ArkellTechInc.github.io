@@ -167,6 +167,7 @@ body {
 }
 .formBox button {
 	display: block;
+	min-height: 36px;
 	line-height: 5vh;
 	font-size: 4vmin;
 	clear: both;
@@ -207,6 +208,7 @@ body {
 	padding: 2px 4px;
 }
 .formBox select,.formBox input,.formBox textarea {
+	min-height: 24px;
 	float: right;
 	font-size: inherit;
 	color: #333;
