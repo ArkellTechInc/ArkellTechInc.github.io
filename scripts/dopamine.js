@@ -71,14 +71,15 @@ function widthUpdate(widthQuery) {
 function switchLayout(){
 	console.log(widthBool);
 	//Determines layout to switch to based on portraitBool, then switches to it
-	if (portraitBool && widthBool) { 	// Portrait phone mode
+	if (portraitBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
-	} else if (!widthBool){
-		currentOrientation = "Portrait";
-	} else
+	} else if (widthBool){
 		currentOrientation = "Landscape";
+	} else
+		currentOrientation = "Portrait";
 
 	switchOrientation(currentOrientation);
+	pageStyleUpdate();
 }
 
 function switchOrientation(mode) {
@@ -93,19 +94,14 @@ function switchOrientation(mode) {
 		}
 
 	}
-	
+	pageStyleUpdate()
 	switch (mode) {
 		case "Portrait": 
 			//Responsive anim tings go here
 			hideMenu();
 			
 			window.scrollTo(0, 0); //scrolls to top
-			// window.scrollTo(0,$(document).height()-$(window).height()); //scrolls to bottom
-			$(".swiperFix1").addClass("swiper-container");
-			$(".swiperFix2").addClass("swiper-wrapper");
-			$(".contentContainer").css("border-bottom","none");
-			$(".contentContainer").css("min-height","100%");
-			$(".swiper-pagination-bullets").css("display","visible");
+
 			//Enable pagination
 			if(mySwiper == undefined){
 				initSwiper();
@@ -121,11 +117,6 @@ function switchOrientation(mode) {
 		case "Landscape":
 			//Responsive anim tings go here
 			showMenu();
-			$(".swiperFix1").removeClass("swiper-container");
-			$(".swiperFix2").removeClass("swiper-wrapper");
-			$(".contentContainer").css("border-bottom","1px dotted #CCC");
-			$(".contentContainer").css("min-height","100vh");
-			$(".swiper-pagination-bullets").css("display","none");
 			
 			//Disable pagination
 			if(mySwiper != undefined){
@@ -151,12 +142,14 @@ function togglePaginationClasses(mode){
 			case "Portrait": 
 				$("#page" + pageNum).removeClass();
 				$("#page" + pageNum).addClass("swiper-slide");
-				
+				$(".swiperFix1").addClass("swiper-container");
+				$(".swiperFix2").addClass("swiper-wrapper");
 				break;
 			case "Landscape":
 				$("#page" + pageNum).removeClass();
 				$("#page" + pageNum).addClass("pageLandscape");
-				
+				$(".swiperFix1").removeClass("swiper-container");
+				$(".swiperFix2").removeClass("swiper-wrapper");
 				break;
 		}
 		pageNum++;
@@ -230,11 +223,10 @@ function updateMenu(){
 	}
 }
 function goToDir() {
-	if(mySwiper != undefined){
-				mySwiper.slideTo(2);
-			}
-			else
-				document.getElementById("page3").scrollIntoView({behavior: "smooth"}); 
+	if (mySwiper != undefined) {
+		mySwiper.slideTo(2);
+	} else
+		document.getElementById("page3").scrollIntoView({behavior: "smooth"}); 
 			
 }
 
@@ -246,10 +238,14 @@ function goToDir() {
 function pageStyleUpdate() {
 	switch (currentOrientation) {
 		case "Portrait":
-		
+			$(".contentContainer").css("border-bottom","none");
+			$(".contentContainer").css("min-height","100%");
+			$(".swiper-pagination-bullets").css("display","visible");
 			break;
 		case "Landscape":
-			
+			$(".contentContainer").css("border-bottom","1px dotted #CCC");
+			$(".contentContainer").css("min-height","100vh");
+			$(".swiper-pagination-bullets").css("display","none");
 			break;
 	}
 }
