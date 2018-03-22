@@ -607,11 +607,13 @@ body {
 	top: 0;
 	left: 0;
 	display: block;
+	text-align: center;
 	width: calc(10vh);
 	height: calc(10vh);
 	min-height: 44px;
 	min-width: 44px;
 	font-size: 5vh;
+	line-height: 10vh;
 	background-color: #0b52a0;
 	border: none;
 	/* various browser font rotators and de-selectors*/
