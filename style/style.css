@@ -738,6 +738,7 @@ body {
 }
 #topTitle {
 	position: fixed;
+	z-index: 5;
 	top: 0;
 	line-height: 10vh;
 	min-height: 44px;

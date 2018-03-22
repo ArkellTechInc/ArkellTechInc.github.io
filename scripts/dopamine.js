@@ -17,7 +17,7 @@ var portraitBool = true;
 var widthBool = true;
 var currentOrientation = "Portrait";
 var portraitQuery = window.matchMedia("(orientation: portrait)");
-var widthQuery = window.matchMedia("(min-width: 800px)");
+var widthQuery = window.matchMedia("(min-width: 859px)");
 
 //-- Call Back Check -----
 var callBackOff = true;
