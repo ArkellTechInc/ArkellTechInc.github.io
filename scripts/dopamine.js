@@ -69,17 +69,15 @@ function widthUpdate(widthQuery) {
 
 
 function switchLayout(){
-	console.log(widthBool);
 	//Determines layout to switch to based on portraitBool, then switches to it
 	if (portraitBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
 	} else if (widthBool){
 		currentOrientation = "Landscape";
-	} else
+	} else {
 		currentOrientation = "Portrait";
-
+	}
 	switchOrientation(currentOrientation);
-	pageStyleUpdate();
 }
 
 function switchOrientation(mode) {
@@ -94,7 +92,7 @@ function switchOrientation(mode) {
 		}
 
 	}
-	pageStyleUpdate()
+	pageStyleUpdate();
 	switch (mode) {
 		case "Portrait": 
 			//Responsive anim tings go here
