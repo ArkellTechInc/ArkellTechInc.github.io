@@ -579,7 +579,6 @@ body {
 	left: 0;
 	width: 100%;
 	text-align: center;
-	
 }
 #dropDownArrow {
 	display: inline-block;
@@ -613,6 +612,7 @@ body {
 	min-height: 44px;
 	min-width: 44px;
 	font-size: 5vh;
+	margin: 0 auto;
 	line-height: 10vh;
 	background-color: #0b52a0;
 	border: none;
