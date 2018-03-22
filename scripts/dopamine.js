@@ -13,9 +13,9 @@ var menuWidth = 300;
 
 //-- Media query handling -------------------------------------------------
 
-var portraitBool = true;
+var widthBool = true;
 var currentOrientation = "Portrait";
-var portraitQuery = window.matchMedia("(orientation: portrait)");
+var widthQuery = window.matchMedia("(min-width: 860px)");
 
 //-- Call Back Check -----
 var callBackOff = true;
@@ -24,10 +24,10 @@ var xMark = "\u2716";
 //-- Document is ready :0 ---------------
 $(document).ready(function(){
 	// Attach listeners to trigger updates on state changes
-	portraitQuery.addListener(portraitUpdate);
+	widthQuery.addListener(widthUpdate);
 	
 	// Call update functions once at run time, Swiper is now initialized here
-	portraitUpdate(portraitQuery);
+	widthUpdate(widthQuery);
 	updateMenu(); 
 	//Prevent animation from running if site is loaded on desktop
 	menuProgress = menuTarget;
@@ -54,15 +54,15 @@ function initSwiper(){
 	});
 }
 
-function portraitUpdate(portraitQuery) {
-	portraitBool = portraitQuery.matches;
+function widthUpdate(widthQuery) {
+	widthBool = widthQuery.matches;
 	switchLayout();
 }
 
 
 function switchLayout(){
 	//Determines layout to switch to based on portraitBool, then switches to it
-	if (portraitBool) { 	// Portrait phone mode
+	if (!widthBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
 	} else {
 		

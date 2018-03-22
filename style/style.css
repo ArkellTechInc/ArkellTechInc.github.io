@@ -56,7 +56,8 @@ li:hover {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 body {
-	background-color: #FDFDFF;
+	background-image: url("../images/bgNoise.png");
+	background-repeat: repeat;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #CCC;
@@ -75,7 +76,7 @@ body {
 	float: right;
 	color: #333;
 	font-weight: 100;
-	font-size: 3.5vmin;
+	font-size: 14px;
 	font-style: italic;
 	width: 40%;
 	text-align: center;
@@ -88,18 +89,18 @@ body {
 }
 .alignLeft {
 	text-align: left;
-	text-indent: 5vmin;
+	text-indent: 18px;
 }
 .callBackText {
-	font-size: 4vmin;
+	font-size: 14px;
 }
 .clearBoth {
 	clear: both;
 }
 .contentContainer {
 	width: 100%;
-	margin: 0 auto 0 auto;
-	padding: 2vh 4% 0 4%;
+	margin: 0 auto;
+	padding: 12px;
 }
 .darker {
 	color: #333 !important;
@@ -107,23 +108,24 @@ body {
 .didYouKnowBox {
 	display: inline-block;
 	float: right;
-	margin: 4vh 0 0 0;
-	padding: 3vh 0 0 4vw;
+	margin: 0;
+	padding: 18px 0 0 12px;
 	text-align: left;
 	width: 40%;
 }
 .didYouKnow {
 	color: #555 !important;
 	font-weight: bold;
-	font-size: 5vmin;
-	letter-spacing: 0.2vmin;
-	margin: 0 0 2vh 0;
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin: 0 0 12px 0;
 }
 .didYouKnowBox ul li {
 	color: #0b52a0;
-	line-height: 5vh;
+	line-height: 30px;
 	font-weight: bold;
-	font-size: 3.5vmin;
+	font-size: 14px;
+	font-size: 14px;
 }
 
 .displayNone {
@@ -138,10 +140,10 @@ body {
 }
 .emailIcon {
 	display: inline-block;
-	margin: 0 2vmin 0 2vmin;
+	margin: 0 6px;
 }
 .extIcon {
-	margin: 0 2vmin 0 2vmin;
+	margin: 0 6px;
 	display: inline-block;
 }
 .faster {
@@ -150,9 +152,9 @@ body {
 }
 .footerBox {
 	vertical-align: bottom;
-	font-size: 2vmin;
+	font-size: 12px;
 	color: #333;
-	padding-bottom: 4vh;
+	padding-bottom: 24px;
 }
 .footerBox a {
 	color: #0b52a0;
@@ -167,15 +169,15 @@ body {
 .formBox button {
 	display: block;
 	min-height: 36px;
-	line-height: 5vh;
-	font-size: 4vmin;
+	line-height: 30px;
+	font-size: 14px;
 	clear: both;
 	float: none !important;
-	margin: 1vh auto !important;
+	margin: 6px auto !important;
 	text-align: center !important;
 	background-color: #3E85D3;
 	border-radius: 12px;
-	padding: 1vh 5vmin;
+	padding: 6px 15px;
 	border: none;
 }
 .formBox button:hover {
@@ -238,25 +240,25 @@ body {
 	color: inherit;
 }
 .formBox textarea {
-	margin-bottom: 2vh;
+	margin-bottom: 12px;
 }
 .formContainer {
-	margin-top: 4vh;
-	padding: 0.1vh 0;
+	margin-top: 24px;
+	padding: 6px 0;
 	line-height: 0;
 	background-color: #0b52a0;
 	border-radius: 24px;
 }
 .fullListing {
 	display: inline-block;
-	line-height: 4vmin !important;
+	line-height: 15px !important;
 	vertical-align: middle;
 }
 .getStarted {
-	font-size: 4vmin;
-	padding: 2vmin;
+	font-size: 15px;
+	padding: 6px;
 	border-radius: 12px;
-	margin: 2vh auto 0 auto;
+	margin: 12px auto 0 auto;
 	width: 60%;
 	background-color: #3E85D3;
 }
@@ -266,23 +268,16 @@ body {
 .halfOpacity {
 	opacity: 0.2;
 }
-.hLine {
-	width: 30%;
-	border-bottom: 2px solid #0b52a0;
-	line-height: 1vh;
-	margin: 3vh auto 3vh auto;
-	/* do a line */
-}
 .hoursBox {
 	color: #666;
 	font-weight: bold;
-	font-size: 3vmin;
-	line-height: 3.5vmin;
-	letter-spacing: 0.2vmin;
-	padding: 2vh 3vw 2vh 3vw;
-	border-radius: 2vmin;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 1px;
+	padding: 12px;
+	border-radius: 12px;
 	background-color: #FFFFBD;
-	margin: 2vh auto 2vh auto;
+	margin: 12px auto;
 	width: 80%;
 	text-align: center;
 }
@@ -306,31 +301,31 @@ body {
     -webkit-transform: translate(-50%, -75%);
 }
 .iconContent {
-	font-size: 4vmin;
-	border-radius: 12px;
-	padding: 2vh 5vmin;
+	font-size: 16px;
+	border-radius: 16px;
+	padding: 16px;
 }
 .iconLabel {
 	position: absolute;
-	font-size: 3vmin;
+	font-size: 12px;
 	width: 100%;
 	bottom: 0;
-	padding: 2vmin;
+	padding: 9px;
 }
 .infoBoxLine {
 	display: inline-block;
 	float: left;
-	margin: 2vh 0 2vh 0;
+	margin: 12px 0;
 	width: 60%;
 	border-right: 1px solid #EEE;
-	padding: 0 0 0 0;
+	padding: 0;
 }
 .infoBox {
 	width: 90%;
-	margin: 2vh auto 2vh auto;
-	padding: 3vh 3vw 3vh 3vw;
+	margin: 12px auto;
+	padding: 18px 12px;
 	border: 1px solid #EEE;
-	border-radius: 0.5vmin;
+	border-radius: 2px;
 	text-align: left;
 	background-color: white;
 }
@@ -338,23 +333,23 @@ body {
 	display: inline-block;
 	color: #555;
 	font-weight: bold;
-	font-size: 3vmin;
-	line-height: 3vmin;
+	font-size: 12px;
+	line-height: 12px;
 }
 .infoBoxContent {
 	color: #555;
 	font-weight: regular;
-	font-size: 4vmin;
+	font-size: 16px;
 	letter-spacing: 0.1vmin;
-	padding: 2vh 0 2vh 0;
+	padding: 12px 0 12px 0;
 }
 .infoBoxFooter {
 	color: #0b52a0;
 	text-align: center;
 	font-weight: regular;
-	font-size: 3vmin;
+	font-size: 12px;
 	letter-spacing: 0.1vmin;
-	padding: 1vh 0 1vh 0;
+	padding: 6px 0 6px 0;
 }
 .infoBoxFooter:hover {
 	cursor: pointer;
@@ -365,46 +360,46 @@ body {
 .infoBoxHighlight {
 	color: #666;
 	font-weight: bold;
-	font-size: 3vmin;
-	line-height: 3.5vmin;
+	font-size: 12px;
+	line-height: 14px;
 	letter-spacing: 0.1vmin;
-	padding: 2vh 3vw 2vh 3vw;
-	border-radius: 2vmin;
+	padding: 12px;
+	border-radius: 9px;
 	background-color: #D7FFFF;
 }
 .infoBoxLink {
 	text-align: center;
 	color: white;
 	font-weight: bold;
-	font-size: 3vmin;
+	font-size: 12px;
 	letter-spacing: 0.1vmin;
-	padding: 1.5vh 3vw 1.5vh 3vw;
+	padding: 24px 9px;
 	border-radius: 1vmin;
 	background-color: #029eb6;
 	width: 80%;
-	margin: 2vh auto 2vh auto;
-	box-shadow: 0.1vmin 0.1vmin 0.1vmin #AAA;
+	margin: 12px auto;
+	box-shadow: 1px 1px 1px #AAA;
 }
 .infoBoxTitle {
 	color: #555;
 	font-weight: bold;
-	font-size: 5vmin;
-	letter-spacing: 0.2vmin;
+	font-size: 24px;
+	letter-spacing: 0.9px;
 }
 .jobTitle {
 	color: #333;
 	font-weight: 100;
-	padding: 0 0 0.5vh 0;
+	padding: 0;
 }
 .learnMore {
 	width: 100%;
-	margin: 2vh auto;
+	margin: 12px auto;
 	color: white;
 	background-color: #0b52a0;
 	border-radius: 25px;
-	font-size: 5vmin;
+	font-size: 16px;
 	font-weight: 500;
-	padding: 3vh 4vw;
+	padding: 16px;
 }
 .leftContainer {
 	display: inline-block;
@@ -426,34 +421,34 @@ body {
 }
 .pageSubTitle {
 	color: #999;
-	font-size: 3.5vmin;
+	font-size: 14px;
 	font-weight: bold;
 	text-align: left;
-	padding: 2vh 0 0 5vmin;
+	padding: 12px 0 0 12px;
 }
 .pageTitle {
 	display: block;
 	clear: both;
 	color: white;
-	font-size: 4.5vmin;
+	font-size: 16px;
 	font-weight: bold;
-	margin: 0.5vh auto;
+	margin: 24px auto;
 	text-align: left;
 	border-radius: 12px;
-	padding: 3vh 2vmin;
+	padding: 16px 9px;
 	background-color: #0b52a0;
 }
 .phoneBox {
 	color: inherit;
 	display: inline-block;
-	font-size: 4vmin;
+	font-size: 16px;
 	font-weight: 400;
 	background-color: #3E85D3;
 	border-radius: 12px;
 	color: white !important;
 	float: right !important;
 	text-align: center !important;
-	padding: 2vmin;
+	padding: 9px;
 	transform: translate(0,-25%);
 	-ms-transform: translate(0, -25%);
     -webkit-transform: translate(0, -25%);
@@ -470,7 +465,7 @@ body {
 	float: right;
 	width: 60%;
 	max-width: 60%;
-	padding: 0 0 0 4vmin;
+	padding: 0 0 0 16px;
 	height: 100%;
 }
 .selected {
@@ -478,13 +473,13 @@ body {
 }
 .staffMember {
 	border-bottom: 1px solid #CCC;
-	padding-bottom: 1vh;
-	margin: 1vh auto 1vh auto;
+	padding-bottom: 6px;
+	margin: 6px auto 6px auto;
 	width: 90%;
 	color: #333;
-	font-size: 3vmin;
+	font-size: 12px;
 	font-weight: bold;
-	line-height: 5vmin;
+	line-height: 16px;
 }
 .subMenu {
 	text-indent: 30px;
@@ -501,10 +496,10 @@ body {
 }
 .text2 {
 	text-align: left;
-	font-size: 5vw;
+	font-size: 16px;
 	font-weight: lighter;
-	text-indent: 5vw;
-	line-height: 5vw;
+	text-indent: 16px;
+	line-height: 16px;
 	color: #1c252b;
 }
 .underline {
@@ -533,52 +528,19 @@ body {
 	z-index: 11;
 }
 #boxContainer {
-	margin: 5vh 0;
+	margin: 24px 0;
 }
 #boxContainer img {
 	width: 80%;
 	padding-right: 5%;
 	max-width: 400px;
-	margin: 10vh 0;
-}
-#botMenu {
-	background: linear-gradient(to top, rgba(11,82,160,1), rgba(255,255,255,1));
-}
-#botLeft {
-	position: relative;
-	float: left;
-	display: inline;
-	text-align: center;
-	width: 30vw;
-	height: 20vh;
-	color: white;
-}
-#botRight {
-	position: relative;
-	float: right;
-	display: inline;
-	width: 70vw;
-	height: 20vh;
-	background-color: #0b52a0;
-}
-#botSubTitle {
-	font-size: 1.8vh;
-	line-height: 2vh;
-	width: 90%;
-	margin: 0 auto 0 auto;
-}
-#botTitle {
-	font-size: 3vh;
-	border: 2px solid white;
-	width: 20vw;
-	padding: 1vh 1vh 1.5vh 1vh;
-	margin: 2vh auto 2vh auto;
+	margin: 64px 0;
 }
 #callBackForm {
-	padding-top: 1vh;
+	padding-top: 6px;
 	border-radius: 12px;
 	width: 100%;
-	margin: 2vh auto 0 auto;
+	margin: 0 auto 0 auto;
 }
 #callBackForm .formBox label {
 	color: white;
@@ -588,7 +550,7 @@ body {
 	float: none;
 	color: black;
 	padding-left: 10px;
-	margin-left: 2vmin!important;
+	margin-left: 9px!important;
 	width: auto;
 }
 #callBackForm .formBox button {
@@ -600,7 +562,6 @@ body {
 	filter: alpha(opacity=80);
 }
 #caption {
-	height: 25vh;
 	font-style: italic;
 	text-align: center;
 }
@@ -611,7 +572,6 @@ body {
 #container {
 	position: absolute;
 	width: inherit;
-	
 }
 #content {
 	top: 0;
@@ -639,7 +599,7 @@ body {
 #map {
 	width: 100%;
 	height: 20vh;
-	padding-bottom: 4vmin;
+	padding-bottom: 16px;
 }
 #menuButton {
 	position: fixed;
@@ -651,8 +611,8 @@ body {
 	height: calc(10vh);
 	min-height: 44px;
 	min-width: 44px;
-	font-size: 4vh;
-	letter-spacing: -0.5vh;
+	font-size: 24px;
+	letter-spacing: -2px;
 	background-color: #0b52a0;
 	border: none;
 	/* various browser font rotators and de-selectors*/
@@ -708,9 +668,9 @@ body {
 	display: block;
 	padding-left: 20px;
 	vertical-align: middle;
-	line-height: 7vh;
-	font-size: 5vw;
-	letter-spacing: 0.1vmin;
+	line-height: 44px;
+	font-size: 16px;
+	letter-spacing: 1px;
 	font-weight: regular;
 }
 #sideMenuPhone {
@@ -730,19 +690,20 @@ body {
 #title {
 	background-color: #0b52a0;
 	border: none;
-	font-size: 5vw;
+	font-size: 20px;
+	line-height: 10vh;
 	text-align: center;
 }
 #topMenu {
 	position: absolute;
-	line-height: 10vh;
+	line-height: 44px;
 	min-height: 44px;
 }
 #topTitle {
 	position: fixed;
 	z-index: 5;
 	top: 0;
-	line-height: 10vh;
+	line-height: 44px;
 	min-height: 44px;
 	width: 100%;
 	text-align: center;
@@ -757,9 +718,8 @@ body {
 	background-color: red;
 }
 #vid {
-	margin-top: 5vh;
-	width: 80vmin;
-	height: 45vmin;
+	margin-top: 24px;
+	max-width: 80%;
 }
 
 /* ---------------------------Portrait Classes-------------------------------- */
@@ -862,7 +822,10 @@ body {
 	}
 	
 /* ------------------------------------------------ Class Media Queries ------------------------------------------------- */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
+	#vid {
+		
+	}
 	.addressButton {
 		font-size: 24px;
 	}
@@ -908,34 +871,13 @@ body {
 		font-size: 24px;
 	}
 	.pageTitle {
-		font-size: 28px;
+		font-size: 24px;
 	}
 	.phoneBox {
-		font-size: 28px;
+		font-size: 24px;
 	}
 	.staffMember {
 		font-size: 22px;
 	}
 	
-}
-@media screen and (min-width: 450px) and (orientation: portrait) {
-	.formBox {
-		font-size: 24px;
-		margin: 24px 0;
-	}
-	
-	.sideMenuPortrait ul li {
-		font-size: 3vw !important;
-	}
-}
-@media (min-aspect-ratio: 3/4) {
-	.botMenuPortrait {
-		display: none !important;
-	}
-	.contentPortrait {
-		height: 100%;
-	}
-	#map {
-	height: 35vh;
-	}
 }
