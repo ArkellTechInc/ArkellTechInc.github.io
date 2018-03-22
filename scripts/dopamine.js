@@ -340,5 +340,5 @@ function toggleBox(index){
 	}
 }
 $(':input').on('focus', function() {
-    document.body.scrollTop = $(this).offset().top;
+    document.body.scrollTop += this.getBoundingClientRect().top - 10;
 });
