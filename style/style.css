@@ -570,6 +570,7 @@ body {
 }
 
 #container {
+	z-index: -2;
 	position: absolute;
 	width: inherit;
 }
@@ -598,12 +599,11 @@ body {
 }
 #map {
 	width: 100%;
-	height: 20vh;
+	height: auto;
 	padding-bottom: 16px;
 }
 #menuButton {
 	position: fixed;
-	z-index: 10;
 	top: 0;
 	left: 0;
 	display: block;
@@ -611,8 +611,7 @@ body {
 	height: calc(10vh);
 	min-height: 44px;
 	min-width: 44px;
-	font-size: 24px;
-	letter-spacing: -2px;
+	font-size: 5vh;
 	background-color: #0b52a0;
 	border: none;
 	/* various browser font rotators and de-selectors*/
@@ -644,7 +643,6 @@ body {
 }
 #phoneIcon {
 	position: fixed;
-	z-index: 10;
 	top: 0;
 	right: 0;
 	display: inline-block;
@@ -695,13 +693,14 @@ body {
 	text-align: center;
 }
 #topMenu {
-	position: absolute;
+	position: fixed;
+	top: 0;
 	line-height: 44px;
 	min-height: 44px;
 }
 #topTitle {
 	position: fixed;
-	z-index: 5;
+	z-index: -1;
 	top: 0;
 	line-height: 44px;
 	min-height: 44px;
@@ -724,16 +723,11 @@ body {
 
 /* ---------------------------Portrait Classes-------------------------------- */
 	.botMenuPortrait {
-		position: absolute;
-		top: 80vh;
-		left: 0;
-		width: 100vw;
-		height: 20vh;
 	}
 	.containerPortrait {
 		top: 10vh;
 		left: 0;
-		height: 90vh;
+		min-height: 100%;
 	}
 	.contentPortrait {
 		height: calc(100% - 10vh);
@@ -748,7 +742,7 @@ body {
 		top: 10vh;
 		left: -300px;
 		width: 300px;
-		height: 90vh;
+		min-height: 100%;
 	}
 	.sideMenuPhonePortrait {
 		display: none !important;
