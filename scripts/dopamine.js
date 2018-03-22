@@ -103,6 +103,9 @@ function switchOrientation(mode) {
 			// window.scrollTo(0,$(document).height()-$(window).height()); //scrolls to bottom
 			$(".swiperFix1").addClass("swiper-container");
 			$(".swiperFix2").addClass("swiper-wrapper");
+			$(".contentContainer").css("border-bottom","none");
+			$(".contentContainer").css("min-height","100%");
+			$(".swiper-pagination-bullets").css("display","visible");
 			//Enable pagination
 			if(mySwiper == undefined){
 				initSwiper();
@@ -120,6 +123,9 @@ function switchOrientation(mode) {
 			showMenu();
 			$(".swiperFix1").removeClass("swiper-container");
 			$(".swiperFix2").removeClass("swiper-wrapper");
+			$(".contentContainer").css("border-bottom","1px dotted #CCC");
+			$(".contentContainer").css("min-height","100vh");
+			$(".swiper-pagination-bullets").css("display","none");
 			
 			//Disable pagination
 			if(mySwiper != undefined){
@@ -145,10 +151,12 @@ function togglePaginationClasses(mode){
 			case "Portrait": 
 				$("#page" + pageNum).removeClass();
 				$("#page" + pageNum).addClass("swiper-slide");
+				
 				break;
 			case "Landscape":
 				$("#page" + pageNum).removeClass();
 				$("#page" + pageNum).addClass("pageLandscape");
+				
 				break;
 		}
 		pageNum++;
@@ -212,7 +220,7 @@ function updateMenu(){
 	}
 	if(currentOrientation == "Landscape"){
 		$("#container").css("left", (menuProgress * menuWidth) + "px");
-		$("#container").css("width", "calc(100vw - " + (menuProgress * menuWidth) + "px)");
+		$("#container").css("width", "calc(99vw - " + (menuProgress * menuWidth) + "px)");
 		$("#blackBox").css("opacity",0);
 		$("#blackBox").css("pointer-events","none");
 	}
@@ -241,20 +249,32 @@ function pageStyleUpdate() {
 		
 			break;
 		case "Landscape":
-		
+			
 			break;
 	}
 }
 function toggleCallBack() {
-	$("#getStarted").toggleClass("seeMore");
-	$("#iconContainer").toggle(400);
-	$("#callBackForm").toggle(400);
-	if($("#getStarted").hasClass("seeMore")){
-		$("#getStarted").text(xMark);
+	//check to see if the icon box or content is animating
+	if($("#getStarted").is(":animated") || $("#callBackForm").is(":animated")){
+		return false;
 	} else {
-		$("#getStarted").text("Click Here to Get Started");
+		//shrink the box if the form is active
+		if($("#callBackForm").is(":hidden")){
+			$(".getStarted").animate({ width: "20%" });
+		} else {
+			$(".getStarted").animate({ width: "60%" });
+		}
+		//swap the hide/show states of the classes
+		$("#getStarted").toggleClass("seeMore");
+		$("#iconContainer").toggle(400);
+		$("#callBackForm").toggle(400);
+		//swaps the text
+		if($("#getStarted").hasClass("seeMore")){
+			$("#getStarted").text(xMark);
+		} else {
+			$("#getStarted").text("Click Here to Get Started");
+		}
 	}
-	
 }
 // Makes the boxes all animated and stuff
 function toggleBox(index){
@@ -272,6 +292,7 @@ function toggleBox(index){
 		//toggles the boxes that aren't clicked, and show the neccessary content the other content
 		switch(index){
 			case 1: 
+				//clicks careless driving
 				$(".iconContent").css("backgroundColor", $("#carelessDrivingBox").css("backgroundColor"));
 				$("#carelessDrivingBox").show(400);
 				$("#impairedDrivingBox").toggle(400);
@@ -282,7 +303,8 @@ function toggleBox(index){
 				$("#streetRacingContent").hide();
 				$("#trafficTicketsContent").hide();
 				break;
-			case 2: 
+			case 2:
+				//clicks impaired driving
 				$("#carelessDrivingBox").toggle(400);
 				$("#impairedDrivingBox").show(400);
 				$(".iconContent").css("backgroundColor", $("#impairedDrivingBox").css("backgroundColor"));
@@ -293,6 +315,7 @@ function toggleBox(index){
 				$("#streetRacingContent").hide();
 				$("#trafficTicketsContent").hide();
 				break;
+				//clicks street racing
 			case 3: 
 				$("#carelessDrivingBox").toggle(400);
 				$("#impairedDrivingBox").toggle(400);
@@ -305,6 +328,7 @@ function toggleBox(index){
 				$("#trafficTicketsContent").hide();
 				break;
 			case 4: 
+				//clicks traffic tickets
 				$("#carelessDrivingBox").toggle(400);
 				$("#impairedDrivingBox").toggle(400);
 				$("#streetRacingBox").toggle(400);
