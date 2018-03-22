@@ -236,21 +236,40 @@ function toggleCallBack() {
 		return false;
 	} else {
 		//shrink the box if the form is active
-		if($("#callBackForm").is(":hidden")){
-			$(".getStarted").animate({ width: "20%" });
+		if(!$("#iconContainer").is(":hidden")){
+			$(".getStarted").animate({ width: "20%" }).text(xMark);
+			$("#iconContainer").animate({ height: '0px' }, 400, function() {
+                $(this).hide();
+             });
+			$("#callBackForm").show().css("visibility", "visible").css("height",'0px').animate({
+				height: $('#callBackForm').get(0).scrollHeight
+			}, 400, function(){
+				$(this).height('auto');
+			});
 		} else {
-			$(".getStarted").animate({ width: "60%" });
+			$(".getStarted").animate({
+				width: "60%" 
+			}, {
+			complete: function(){
+				$(".getStarted").text("Click Here to Get Started")
+				}
+			});
+			$("#iconContainer").show().animate({
+				height: $('#iconContainer').get(0).scrollHeight
+			}, 400, function(){
+				$(this).height('auto');
+			});
+			$("#callBackForm").animate({ height: '0px' }, 400, function() {
+                $(this).css("visibility", "hidden");
+             });
 		}
 		//swap the hide/show states of the classes
 		$("#getStarted").toggleClass("seeMore");
-		$("#iconContainer").toggle(400);
-		$("#callBackForm").toggle(400);
+		//$("#iconContainer").toggle(400);
+
+		
 		//swaps the text
-		if($("#getStarted").hasClass("seeMore")){
-			$("#getStarted").text(xMark);
-		} else {
-			$("#getStarted").text("Click Here to Get Started");
-		}
+
 	}
 }
 // Makes the boxes all animated and stuff
