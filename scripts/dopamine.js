@@ -60,15 +60,18 @@ function initSwiper(){
 
 function portraitUpdate(portraitQuery) {
 	portraitBool = portraitQuery.matches;
+	widthBool = widthQuery.matches;
 	switchLayout();
 }
 function widthUpdate(widthQuery) {
+	portraitBool = portraitQuery.matches;
 	widthBool = widthQuery.matches;
 	switchLayout();
 }
 
 
 function switchLayout(){
+	console.log(widthBool);
 	//Determines layout to switch to based on portraitBool, then switches to it
 	if (portraitBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
@@ -92,7 +95,7 @@ function switchOrientation(mode) {
 		}
 
 	}
-	pageStyleUpdate();
+	pageStyleUpdate()
 	switch (mode) {
 		case "Portrait": 
 			//Responsive anim tings go here
