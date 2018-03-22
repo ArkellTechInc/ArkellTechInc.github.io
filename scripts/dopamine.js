@@ -340,5 +340,11 @@ function toggleBox(index){
 	}
 }
 $(':input').on('focus', function() {
+	$("body").css("overflow-y", "visible");
+	$("body").css("height","150%");
     document.body.scrollTop += this.getBoundingClientRect().top - 10;
+});
+$(':input').on('blur', function() {
+	$("body").css("overflow-y", "hidden");
+	$("body").css("height","100%");
 });
