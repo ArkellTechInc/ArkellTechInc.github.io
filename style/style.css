@@ -159,9 +159,10 @@ body {
 	text-decoration: underline;
 }
 .formBox {
-	font-size: 4vmin;
-	margin: 3vh 0;
-	line-height: 3.5vh;
+	font-size: 16px;
+	margin: 12px 0;
+	line-height: 28px;
+	min-height: 28px;
 }
 .formBox button {
 	display: block;
@@ -188,6 +189,7 @@ body {
 	font-weight: 600;
 	width: 30%;
 	text-align: right;
+	min-height: 24px;
 }
 .formBox label.error{
 	position: absolute;
@@ -919,6 +921,7 @@ body {
 @media screen and (min-width: 450px) and (orientation: portrait) {
 	.formBox {
 		font-size: 24px;
+		margin: 24px 0;
 	}
 	
 	.sideMenuPortrait ul li {

@@ -14,10 +14,8 @@ var menuWidth = 300;
 //-- Media query handling -------------------------------------------------
 
 var portraitBool = true;
-var widthBool = true;
 var currentOrientation = "Portrait";
 var portraitQuery = window.matchMedia("(orientation: portrait)");
-var widthQuery = window.matchMedia("(min-width: 859px)");
 
 //-- Call Back Check -----
 var callBackOff = true;
@@ -27,8 +25,6 @@ var xMark = "\u2716";
 $(document).ready(function(){
 	// Attach listeners to trigger updates on state changes
 	portraitQuery.addListener(portraitUpdate);
-	widthQuery.addListener(widthUpdate);
-	
 	
 	// Call update functions once at run time, Swiper is now initialized here
 	portraitUpdate(portraitQuery);
@@ -60,25 +56,17 @@ function initSwiper(){
 
 function portraitUpdate(portraitQuery) {
 	portraitBool = portraitQuery.matches;
-	widthBool = widthQuery.matches;
-	switchLayout();
-}
-function widthUpdate(widthQuery) {
-	portraitBool = portraitQuery.matches;
-	widthBool = widthQuery.matches;
 	switchLayout();
 }
 
 
 function switchLayout(){
-	console.log(widthBool);
 	//Determines layout to switch to based on portraitBool, then switches to it
 	if (portraitBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
-	} else if (widthBool){
-		currentOrientation = "Landscape";
 	} else {
-		currentOrientation = "Portrait";
+		
+		currentOrientation = "Landscape";
 	}
 	switchOrientation(currentOrientation);
 }
@@ -95,30 +83,29 @@ function switchOrientation(mode) {
 		}
 
 	}
-	pageStyleUpdate()
+	pageStyleUpdate();
 	switch (mode) {
 		case "Portrait": 
 			//Responsive anim tings go here
 			hideMenu();
 			
 			window.scrollTo(0, 0); //scrolls to top
-
+			$(".swiperFix1").addClass("swiper-container");
+			$(".swiperFix2").addClass("swiper-wrapper");
 			//Enable pagination
 			if(mySwiper == undefined){
 				initSwiper();
 			}
-			
 			//Prevent vertical scrolling
 			//$("body").css("overflow-y", "hidden");
 			
 			togglePaginationClasses(mode);
-			
-			
 			break;
 		case "Landscape":
 			//Responsive anim tings go here
 			showMenu();
-			
+			$(".swiperFix1").removeClass("swiper-container");
+			$(".swiperFix2").removeClass("swiper-wrapper");
 			//Disable pagination
 			if(mySwiper != undefined){
 				mySwiper.destroy();	
@@ -143,14 +130,10 @@ function togglePaginationClasses(mode){
 			case "Portrait": 
 				$("#page" + pageNum).removeClass();
 				$("#page" + pageNum).addClass("swiper-slide");
-				$(".swiperFix1").addClass("swiper-container");
-				$(".swiperFix2").addClass("swiper-wrapper");
 				break;
 			case "Landscape":
 				$("#page" + pageNum).removeClass();
 				$("#page" + pageNum).addClass("pageLandscape");
-				$(".swiperFix1").removeClass("swiper-container");
-				$(".swiperFix2").removeClass("swiper-wrapper");
 				break;
 		}
 		pageNum++;
@@ -218,7 +201,6 @@ function updateMenu(){
 		$("#blackBox").css("opacity",0);
 		$("#blackBox").css("pointer-events","none");
 	}
-	
 	if(mySwiper != undefined){
 		mySwiper.update();
 	}
@@ -241,12 +223,10 @@ function pageStyleUpdate() {
 		case "Portrait":
 			$(".contentContainer").css("border-bottom","none");
 			$(".contentContainer").css("min-height","100%");
-			$(".swiper-pagination-bullets").css("display","visible");
 			break;
 		case "Landscape":
 			$(".contentContainer").css("border-bottom","1px dotted #CCC");
 			$(".contentContainer").css("min-height","100vh");
-			$(".swiper-pagination-bullets").css("display","none");
 			break;
 	}
 }
