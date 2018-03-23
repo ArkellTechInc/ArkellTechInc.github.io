@@ -347,4 +347,5 @@ $(':input').on('focus', function() {
 $(':input').on('blur', function() {
 	$("body").css("overflow-y", "hidden");
 	$("body").css("height","100%");
+	document.body.scrollTop(400);
 });

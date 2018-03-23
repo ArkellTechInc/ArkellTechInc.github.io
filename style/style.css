@@ -606,26 +606,12 @@ body {
 	top: 0;
 	left: 0;
 	display: block;
-	text-align: center;
 	width: calc(10vh);
 	height: calc(10vh);
-	min-height: 44px;
 	min-width: 44px;
-	font-size: 5vh;
-	margin: 0 auto;
-	line-height: 10vh;
+	min-height: 44px;
 	background-color: #0b52a0;
 	border: none;
-	/* various browser font rotators and de-selectors*/
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-	-webkit-user-select: none;      
-	-moz-user-select: none;
-	-ms-user-select: none; 
-	user-select: none;
 }
 #menuImg {
 	margin: 25px 0 0 50px;
