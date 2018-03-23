@@ -345,7 +345,7 @@ $(':input').on('focus', function() {
     document.body.scrollTop += this.getBoundingClientRect().top - 10;
 });
 $(':input').on('blur', function() {
+	window.scrollTo(0,0);
 	$("body").css("overflow-y", "hidden");
 	$("body").css("height","100%");
-	document.body.scrollTop(400);
 });
