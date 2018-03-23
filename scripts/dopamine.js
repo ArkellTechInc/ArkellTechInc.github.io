@@ -10,9 +10,8 @@ var menuProgress = 0; //Number from 0 to 1, 0 means menu closed, 1 means menu op
 var menuTarget = 0;
 var menuWidth = 300;
 
-
 //-- Media query handling -------------------------------------------------
-
+var isMobile;
 var widthBool = true;
 var currentOrientation = "Portrait";
 var widthQuery = window.matchMedia("(min-width: 860px)");
@@ -23,6 +22,8 @@ var xMark = "\u2716";
 
 //-- Document is ready :0 ---------------
 $(document).ready(function(){
+	// checks if mobile
+	isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 	// Attach listeners to trigger updates on state changes
 	widthQuery.addListener(widthUpdate);
 	
@@ -226,11 +227,13 @@ function pageStyleUpdate() {
 			break;
 		case "Landscape":
 			$(".contentContainer").css("border-bottom","1px dotted #CCC");
-			$(".contentContainer").css("min-height","100vh");
+			$(".contentContainer").css("min-height","150%");
 			break;
 	}
 }
 function toggleCallBack() {
+	//adds a bit of space to allow for smoother animating
+	$("#iconContainer").css("min-height", "auto");
 	//check to see if the icon box or content is animating
 	if($("#getStarted").is(":animated") || $("#callBackForm").is(":animated")){
 		return false;
@@ -244,7 +247,7 @@ function toggleCallBack() {
 			$("#callBackForm").show().css("visibility", "visible").css("height",'0px').animate({
 				height: $('#callBackForm').get(0).scrollHeight
 			}, 400, function(){
-				$(this).height('auto');
+				$(this).height('auto').height();
 			});
 		} else {
 			$(".getStarted").animate({
@@ -259,22 +262,23 @@ function toggleCallBack() {
 			}, 400, function(){
 				$(this).height('auto');
 			});
-			$("#callBackForm").animate({ height: '0px' }, 400, function() {
-                $(this).css("visibility", "hidden");
+			$("#callBackForm").animate({ height: '0' }, 400, function() {
+                $(this).css("display", "none");
              });
 		}
 		//swap the hide/show states of the classes
-		$("#getStarted").toggleClass("seeMore");
+		//$("#getStarted").toggleClass("seeMore");
 		//$("#iconContainer").toggle(400);
-
-		
 		//swaps the text
 
 	}
 }
 // Makes the boxes all animated and stuff
 function toggleBox(index){
+	//adds a bit of space to allow for smoother animating
+	$("#iconContainer").css("min-height", "31vmin");
 	//check to see if the icon box or content is animating
+	
 	if($(".iconBox").is(":animated") || $(".iconContent").is(":animated")){
 		return false;
 	} else {
@@ -340,12 +344,16 @@ function toggleBox(index){
 	}
 }
 $(':input').on('focus', function() {
-	$("body").css("overflow-y", "visible");
-	$("body").css("height","150%");
-    document.body.scrollTop += this.getBoundingClientRect().top - 10;
+	if(isMobile){
+		$("body").css("overflow-y", "visible");
+		$("body").css("height","150%");
+		document.body.scrollTop += this.getBoundingClientRect().top - 10;
+	} else return false;
 });
 $(':input').on('blur', function() {
-	window.scrollTo(0,0);
-	$("body").css("overflow-y", "hidden");
-	$("body").css("height","100%");
+	if(isMobile){
+		window.scrollTo(0,0);
+		$("body").css("overflow-y", "hidden");
+		$("body").css("height","100%");
+	} else return false;
 });

@@ -53,11 +53,20 @@ blockquote, q {
 	color: #EEE;
 }
 li:hover {
+	cursor: pointer;
 	background-color: rgba(255, 255, 255, 0.2);
+}
+a:hover,button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
 }
 body {
 	background-image: url("../images/bgNoise.png");
 	background-repeat: repeat;
+}
+button {
+	border: none;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #CCC;
@@ -70,6 +79,10 @@ body {
 }
 :-moz-placeholder { /* Firefox 18- */
   color: #CCC;
+}
+.addressBox {
+	display: inline-block;
+	width: 100%;
 }
 .addressButton {
 	display: inline-block;
@@ -84,29 +97,22 @@ body {
 .addressText {
 	float: left;
 	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
 	color: #333;
 	width: 60%;
 }
-.alignLeft {
-	text-align: left;
-	text-indent: 18px;
-}
 .callBackText {
-	font-size: 14px;
-}
-.clearBoth {
-	clear: both;
+	font-size: 14px;/* mq 24px */
 }
 .contentContainer {
 	width: 100%;
 	margin: 0 auto;
 	padding: 12px;
 }
-.darker {
-	color: #333 !important;
-}
 .didYouKnowBox {
 	display: inline-block;
+	font-weight: bold;
 	float: right;
 	margin: 0;
 	padding: 18px 0 0 12px;
@@ -115,38 +121,26 @@ body {
 }
 .didYouKnow {
 	color: #555 !important;
-	font-weight: bold;
-	font-size: 18px;
+	font-weight: inherit;
+	font-size: 18px;/* mq 26px */
 	letter-spacing: 1px;
-	margin: 0 0 12px 0;
+	margin: 12px 0;
 }
+
 .didYouKnowBox ul li {
 	color: #0b52a0;
 	line-height: 30px;
-	font-weight: bold;
-	font-size: 14px;
-	font-size: 14px;
+	font-weight: inherit;
+	font-size: 14px;/* mq 20px, */
 }
-
 .displayNone {
 	display: none;
 }
-.doodle {
-	width: 100%;
-	object-fit: contain;
-}
-.doodle img {
-	max-height: 80%;
-}
-.emailIcon {
+.icon {
 	display: inline-block;
 	margin: 0 6px;
 }
-.extIcon {
-	margin: 0 6px;
-	display: inline-block;
-}
-.faster {
+.boldItalic {
 	font-weight: bold;
 	font-style: italic;
 }
@@ -161,62 +155,42 @@ body {
 	text-decoration: underline;
 }
 .formBox {
-	font-size: 16px;
-	margin: 12px 0;
-	line-height: 28px;
-	min-height: 28px;
+	font-size: 16px;/* mq 24px, */
+	margin: 10px 0;
 }
 .formBox button {
-	display: block;
-	min-height: 36px;
 	line-height: 30px;
-	font-size: 14px;
+	font-size: 14px;/* mq 24px, */
 	clear: both;
 	float: none !important;
-	margin: 6px auto !important;
+	margin: 0 auto !important;
 	text-align: center !important;
 	background-color: #3E85D3;
 	border-radius: 12px;
 	padding: 6px 15px;
-	border: none;
-}
-.formBox button:hover {
-	cursor: pointer;
-	opacity: 0.8;
-	filter: alpha(opacity=80);
 }
 .formBox label {
+	position: relative;
+	float: left;
 	display: inline-block;
 	color: white;
 	font-weight: 600;
 	width: 30%;
 	text-align: right;
-	min-height: 24px;
 }
 .formBox label.error{
-	position: absolute;
-	left: 0;
-	display: block;
 	color: white;
-	text-align: center!important;
-	width: 100vw;
-	font-size: 75%;
+	font-size: 50%;
 	font-style: italic;
-	transform: translate(0,-190%);
-	-ms-transform: translate(0, -190%);
-    -webkit-transform: translate(0, -190%);
-}
-.formBox input {
-	padding: 2px 4px;
 }
 .formBox select,.formBox input,.formBox textarea {
-	min-height: 24px;
-	float: right;
 	font-size: inherit;
 	color: #333;
 	width: 60%;
+	height: 30px;
 	margin: 0 5%;
 	text-align: left;
+	padding-left: 10px;
 	border: 1px solid #AAA;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -240,41 +214,34 @@ body {
 	color: inherit;
 }
 .formBox textarea {
-	margin-bottom: 12px;
+	height: auto;
 }
 .formContainer {
 	margin-top: 24px;
 	padding: 6px 0;
-	line-height: 0;
 	background-color: #0b52a0;
 	border-radius: 24px;
 }
 .fullListing {
 	display: inline-block;
-	line-height: 15px !important;
 	vertical-align: middle;
 }
 .getStarted {
-	font-size: 15px;
+	font-size: 15px; /* mq 25px, */
 	padding: 6px;
+	border: none;
 	border-radius: 12px;
 	margin: 12px auto 0 auto;
 	width: 60%;
 	background-color: #3E85D3;
 }
-.getStarted:hover{
-	cursor: pointer;
-}
-.halfOpacity {
-	opacity: 0.2;
-}
 .hoursBox {
 	color: #666;
 	font-weight: bold;
-	font-size: 12px;
-	line-height: 16px;
+	font-size: 12px; /* mq 18px, */
+	line-height: 16px; /* mq 24px, */
 	letter-spacing: 1px;
-	padding: 12px;
+	padding: 10px;
 	border-radius: 12px;
 	background-color: #FFFFBD;
 	margin: 12px auto;
@@ -287,9 +254,6 @@ body {
 	width: 25vmin;
 	height: 25vmin;
 }
-.iconBox:hover {
-	cursor: pointer;
-}
 .iconBox img{
 	position: absolute;
 	width: 15vmin;
@@ -301,17 +265,20 @@ body {
     -webkit-transform: translate(-50%, -75%);
 }
 .iconContent {
-	font-size: 16px;
+	display: none;
+	font-size: 16px; /* mq 22px, */
 	border-radius: 16px;
 	padding: 16px;
 }
 .iconLabel {
 	position: absolute;
-	font-size: 12px;
+	font-size: 12px; /* mq 24px, */
 	width: 100%;
 	bottom: 0;
-	padding: 9px;
+	left: 0;
+	padding-bottom: 6px; /* mq 12px, */
 }
+/* ------------------------------------------------ made it this far, above is clean -----------------------------------------------------------*/
 .infoBoxLine {
 	display: inline-block;
 	float: left;
@@ -329,18 +296,11 @@ body {
 	text-align: left;
 	background-color: white;
 }
-.infoBoxAddress {
-	display: inline-block;
-	color: #555;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 12px;
-}
 .infoBoxContent {
 	color: #555;
 	font-weight: regular;
 	font-size: 16px;
-	letter-spacing: 0.1vmin;
+	letter-spacing: 1px;
 	padding: 12px 0 12px 0;
 }
 .infoBoxFooter {
@@ -348,14 +308,8 @@ body {
 	text-align: center;
 	font-weight: regular;
 	font-size: 12px;
-	letter-spacing: 0.1vmin;
+	letter-spacing: 1px;
 	padding: 6px 0 6px 0;
-}
-.infoBoxFooter:hover {
-	cursor: pointer;
-	opacity: 0.8;
-	filter: alpha(opacity=80);
-	
 }
 .infoBoxHighlight {
 	color: #666;
@@ -445,17 +399,12 @@ body {
 	font-weight: 400;
 	background-color: #3E85D3;
 	border-radius: 12px;
-	color: white !important;
 	float: right !important;
 	text-align: center !important;
 	padding: 9px;
 	transform: translate(0,-25%);
 	-ms-transform: translate(0, -25%);
     -webkit-transform: translate(0, -25%);
-}
-.phoneBox:hover {
-	opacity: 0.8;
-	filter: alpha(opacity=80);
 }
 .quote {
 	clear: both;
@@ -527,39 +476,17 @@ body {
 	opacity: 0;
 	z-index: 11;
 }
-#boxContainer {
-	margin: 24px 0;
-}
-#boxContainer img {
-	width: 80%;
-	padding-right: 5%;
-	max-width: 400px;
-	margin: 64px 0;
-}
 #callBackForm {
 	padding-top: 6px;
 	border-radius: 12px;
-	width: 100%;
+	width: 80%;
 	margin: 0 auto 0 auto;
 }
 #callBackForm .formBox label {
 	color: white;
-	width: auto;
 }
 #callBackForm .formBox input {
-	float: none;
 	color: black;
-	padding-left: 10px;
-	margin-left: 9px!important;
-	width: auto;
-}
-#callBackForm .formBox button {
-	border: none;
-	cursor: pointer;
-}
-#callBackForm .formBox button:hover {
-	opacity: 0.8;
-	filter: alpha(opacity=80);
 }
 #caption {
 	font-style: italic;
@@ -589,16 +516,14 @@ body {
 	border-right: 6px solid transparent;
 	border-top: 6px solid white;
 }
+#iconContainer {
+	margin: 0 auto;
+}
 #impairedDrivingBox {
 	background-color: orange;
 }
-#lastPage {
-	height: unset !important;
-	border-bottom: none;
-}
 #map {
 	width: 100%;
-	height: auto;
 	padding-bottom: 16px;
 }
 #menuButton {
@@ -606,10 +531,11 @@ body {
 	top: 0;
 	left: 0;
 	display: block;
+	text-align: center;
 	width: calc(10vh);
 	height: calc(10vh);
-	min-width: 44px;
 	min-height: 44px;
+	min-width: 44px;
 	background-color: #0b52a0;
 	border: none;
 }
@@ -708,6 +634,15 @@ body {
 	margin-top: 24px;
 	max-width: 80%;
 }
+#youngsImg {
+	background-color: white;
+	border-radius: 25px;
+	object-fit: contain;
+	width: 80%;
+	max-width: 400px;
+	margin: 64px auto;
+	padding: 25px;
+}
 
 /* ---------------------------Portrait Classes-------------------------------- */
 	.botMenuPortrait {
@@ -805,8 +740,8 @@ body {
 	
 /* ------------------------------------------------ Class Media Queries ------------------------------------------------- */
 @media screen and (min-width: 860px) {
-	#vid {
-		
+	#map {
+		height: 350px;
 	}
 	.addressButton {
 		font-size: 24px;
@@ -817,18 +752,43 @@ body {
 	.callBackText {
 		font-size: 24px;
 	}
+	.didYouKnow {
+		font-size: 26px;
+	}
+	.didYouKnowBox ul li {
+		font-size: 20px;
+		line-height: 36px;
+	}
 	.formBox {
 		font-size: 24px;
 		margin: 36px;
 	}
-	.formBox label.error{
-		
+	.formBox button {
+		font-size: 24px;
+	}
+	.formBox select,.formBox input  {
+		height: 40px;
+	}
+	.hoursBox {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.iconContent {
+		font-size: 16px;
+	}
+	.getStarted {
+		font-size: 25px;
 	}
 	.learnMore {
 		font-size: 28px;
+		padding: 16px 32px;
 	}
 	.iconContent {
 		font-size: 22px;
+	}
+	.iconLabel {
+		font-size: 24px;
+		padding-bottom: 12px
 	}
 	.infoBoxFooter {
 		font-size: 14px;
@@ -854,6 +814,7 @@ body {
 	}
 	.pageTitle {
 		font-size: 24px;
+		padding: 18px 16px 16px 64px;
 	}
 	.phoneBox {
 		font-size: 24px;
