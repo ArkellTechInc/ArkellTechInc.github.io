@@ -284,14 +284,13 @@ button {
 	float: left;
 	margin: 12px 0;
 	width: 60%;
-	border-right: 1px solid #EEE;
+	border-right: 1px dotted #AAA;
 	padding: 0;
 }
 .infoBox {
 	width: 90%;
 	margin: 12px auto;
 	padding: 18px 12px;
-	border: 1px solid #EEE;
 	border-radius: 2px;
 	text-align: left;
 	background-color: white;
@@ -386,7 +385,7 @@ button {
 	color: white;
 	font-size: 16px;
 	font-weight: bold;
-	margin: 0 auto 24px auto;
+	margin: 0 auto;
 	text-align: left;
 	border-radius: 12px;
 	padding: 16px 9px;
@@ -752,6 +751,10 @@ button {
 	.callBackText {
 		font-size: 24px;
 	}
+	.contentContainer {
+		width: 60%;
+		min-width: 600px;
+	}
 	.didYouKnow {
 		font-size: 26px;
 	}
@@ -776,12 +779,21 @@ button {
 	.iconContent {
 		font-size: 16px;
 	}
+	.infoBoxLink {
+		font-size: 20px;
+	}
+	.jobTitle {
+		margin: 12px 0 0 0;
+	}
 	.getStarted {
 		font-size: 25px;
 	}
 	.learnMore {
 		font-size: 28px;
 		padding: 16px 32px;
+	}
+	.icon {
+		padding: 8px 0;
 	}
 	.iconContent {
 		font-size: 22px;
@@ -821,6 +833,7 @@ button {
 	}
 	.staffMember {
 		font-size: 22px;
+		padding: 8px 0;
 	}
 	
 }
