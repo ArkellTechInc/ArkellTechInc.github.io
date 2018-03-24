@@ -366,6 +366,7 @@ button {
 	padding: 16px;
 }
 .leftContainer {
+	float: left;
 	display: inline-block;
 	float: left;
 	width: 40%;
@@ -421,7 +422,6 @@ button {
 }
 .rightContainer {
 	display: inline-block;
-	float: right;
 	width: 60%;
 	max-width: 60%;
 	padding: 0 0 0 16px;
@@ -653,11 +653,12 @@ button {
 #youngsImg {
 	background-color: white;
 	border-radius: 25px;
-	object-fit: contain;
 	width: 80%;
-	max-width: 400px;
-	margin: 64px auto;
+	margin: 20% auto;
 	padding: 25px;
+}
+#youngsImg img{
+	width: 75%;
 }
 
 /* ---------------------------Portrait Classes-------------------------------- */
@@ -718,7 +719,7 @@ button {
 		display: none !important;
 	}
 	.pageLandscape {
-		/* edit me :) */
+		min-height: 100%;
 	}
 	.pageTitleLandscape {
 	}
@@ -844,6 +845,7 @@ button {
 	}
 	.pageSubTitle {
 		font-size: 24px;
+		padding: 12px 0 0 12px;
 	}
 	.pageTitle {
 		font-size: 24px;
