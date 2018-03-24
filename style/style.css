@@ -94,6 +94,9 @@ button {
 	width: 40%;
 	text-align: center;
 }
+.addressButton img {
+	width: 8vmin;
+}
 .addressText {
 	float: left;
 	display: inline-block;
@@ -138,7 +141,11 @@ button {
 }
 .icon {
 	display: inline-block;
+	vertical-align: middle;
 	margin: 0 6px;
+}
+.icon img {
+	width: 5vmin;
 }
 .boldItalic {
 	font-weight: bold;
@@ -226,6 +233,9 @@ button {
 	display: inline-block;
 	vertical-align: middle;
 }
+.fullListing img {
+	width: 4min;
+}
 .getStarted {
 	font-size: 15px; /* mq 25px, */
 	padding: 6px;
@@ -253,16 +263,17 @@ button {
 	display: inline-block;
 	width: 25vmin;
 	height: 25vmin;
+	object-fit: contain;
 }
 .iconBox img{
 	position: absolute;
-	width: 15vmin;
-	height: 15vmin;
-	top: 50%;
+	width: 11vmin;
+	height: auto;
+	top: 40%;
 	left: 50%;
-	transform: translate(-50%, -75%);
-	-ms-transform: translate(-50%, -75%);
-    -webkit-transform: translate(-50%, -75%);
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 .iconContent {
 	display: none;
@@ -566,6 +577,12 @@ button {
 	background-color: #0b52a0;
 	border: none;
 }
+#phoneIcon img {
+	width: calc(10vh);
+	height: calc(10vh);
+	min-width: 44px;
+	min-height: 44px;
+}
 #sideMenu {
 	position: fixed;
 	display: table;
@@ -778,6 +795,10 @@ button {
 	}
 	.iconContent {
 		font-size: 16px;
+	}
+	.iconBox {
+		width: 225px;
+		height: 225px;
 	}
 	.infoBoxLink {
 		font-size: 20px;
