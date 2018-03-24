@@ -540,14 +540,18 @@ button {
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: block;
+	display: inline-block;
 	text-align: center;
-	width: calc(10vh);
-	height: calc(10vh);
+	height: 10vh;
+	width: 10vh;
 	min-height: 44px;
 	min-width: 44px;
 	background-color: #0b52a0;
 	border: none;
+}
+#menuButton img {
+	position: relative;
+	max-height: 4vh;
 }
 #menuImg {
 	margin: 25px 0 0 50px;
@@ -570,18 +574,18 @@ button {
 	top: 0;
 	right: 0;
 	display: inline-block;
-	width: calc(10vh);
-	height: calc(10vh);
+	height: 10vh;
+	width: 10vh;
 	min-width: 44px;
 	min-height: 44px;
 	background-color: #0b52a0;
 	border: none;
 }
 #phoneIcon img {
-	width: calc(10vh);
-	height: calc(10vh);
+	height: 6vh;
 	min-width: 44px;
 	min-height: 44px;
+	vertical-align: middle;
 }
 #sideMenu {
 	position: fixed;
