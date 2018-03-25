@@ -121,6 +121,7 @@ button {
 	padding: 18px 0 0 12px;
 	text-align: left;
 	width: 40%;
+	min-height: 100%;
 }
 .didYouKnow {
 	color: #555 !important;
@@ -148,6 +149,8 @@ button {
 	width: 5vmin;
 }
 .boldItalic {
+	display: inline;
+	color: inherit;
 	font-weight: bold;
 	font-style: italic;
 }
@@ -379,6 +382,43 @@ button {
 .menuNav {
 	border-bottom: 1px solid white;
 }
+.darkSection {
+	text-align: left;
+	width: 100%;
+	padding: 6% 6%;
+}
+.darkText {
+	display: inline-block;
+	width: 60%;
+	vertical-align: middle;
+	padding-right: 10%;
+}
+.lightText {
+	display: inline-block;
+	width: 60%;
+	vertical-align: middle;
+	padding-left: 10%;
+}
+.secIcon {
+	position: relative;
+	display: inline-block;
+	width: 40%;
+	vertical-align: middle;
+}
+.secIcon img {
+	position: relative;
+	height: 80%;
+	width: 80%;
+}
+.lightSection {
+	display: inline-block;
+	text-align: right;
+	width: 100%;
+	padding: 6% 6%;
+	background-color: #3E85D3;
+	vertical-align: middle;
+}
+.
 .page {
 	position: absolute;
 	width: inherit;
@@ -416,9 +456,6 @@ button {
 	transform: translate(0,-25%);
 	-ms-transform: translate(0, -25%);
     -webkit-transform: translate(0, -25%);
-}
-.quote {
-	clear: both;
 }
 .rightContainer {
 	display: inline-block;
@@ -499,6 +536,8 @@ button {
 	color: black;
 }
 #caption {
+	clear: both;
+	display: block;
 	font-style: italic;
 	text-align: center;
 }
@@ -652,7 +691,9 @@ button {
 }
 #vid {
 	margin-top: 24px;
-	max-width: 80%;
+	width: 100%;
+	height: 150px;
+	padding: 0 10%;
 }
 #youngsImg {
 	background-color: white;
@@ -764,6 +805,9 @@ button {
 	#map {
 		height: 350px;
 	}
+	#vid {
+		height: 300px;
+	}
 	.addressButton {
 		font-size: 24px;
 	}
@@ -776,6 +820,9 @@ button {
 	.contentContainer {
 		width: 60%;
 		min-width: 600px;
+	}
+	.darkSection {
+		font-size: 28px;
 	}
 	.didYouKnow {
 		font-size: 26px;
@@ -817,6 +864,9 @@ button {
 	.learnMore {
 		font-size: 28px;
 		padding: 16px 32px;
+	}
+	.lightSection {
+		font-size: 28px;
 	}
 	.icon {
 		padding: 8px 0;
