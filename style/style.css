@@ -261,6 +261,65 @@ button {
 	width: 80%;
 	text-align: center;
 }
+.infographicBox {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	font-size: 14px;
+	line-height: 18px;
+}
+.iBox1 {
+	background-color: rgba(49, 129, 127, 1)
+}
+.iBox2 {
+	background-color: rgba(83, 165, 142, 0.8);
+}
+.iBox3 {
+	background-color: rgba(120, 208, 156, 0.8)
+}
+.iContentLeft {
+	font-weight: bold;
+	text-align: right;
+	padding: 5%;
+}
+.iContentRight {
+	font-weight: bold;
+	text-align: left;
+	padding: 5%;
+}
+.iContentLeftBottom {
+	margin-top: 10px;
+}
+.iHook {
+	width: 80%;
+	padding: 3%;
+	font-size: 20px;
+	text-align: center;
+	border-top: 2px solid white;
+	font-weight: 700;
+}
+.iSubTitle {
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	padding: 0 0 5% 0;
+	font-size: 22px;
+	font-weight: 10;
+	text-align: center;
+}
+.iTitle {
+	padding: 3%;
+	font-size: 28px;
+	text-align: center;
+	font-weight: 700;
+}
+.iXs {
+	padding: 1px 7px;
+	margin: 0 2px;
+	font-size: 20px;
+	background-color: #31817f;
+	color: #53a58e;
+	border-radius: 50%;
+}
+
 .iconBox {
 	position: relative;
 	display: inline-block;
@@ -385,6 +444,33 @@ button {
 .menuNav {
 	border-bottom: 1px solid white;
 }
+.c1 {
+	width: 150px;
+	height: 150px;
+}
+.c3 {
+	width: 250px;
+	height: 250px;
+}
+.c2 {
+	width: 300px;
+	height: 300px;
+}
+.circle {
+	padding: 20px;
+	font-size: 16px;
+	display: table-cell;
+	vertical-align: middle;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color:  #0b52a0;
+	text-align: center;
+}
+.circleTable {
+	width: 300px;
+	min-height: 100%;
+	margin: 0 auto;
+}
 .darkSection {
 	text-align: left;
 	width: 100%;
@@ -392,26 +478,24 @@ button {
 }
 .darkText {
 	display: inline-block;
-	width: 60%;
+	width: 80%;
 	vertical-align: middle;
 	padding-right: 10%;
 }
 .lightText {
 	display: inline-block;
-	width: 60%;
+	width: 80%;
 	vertical-align: middle;
 	padding-left: 10%;
 }
 .secIcon {
-	position: relative;
-	display: inline-block;
-	width: 40%;
 	vertical-align: middle;
+	text-align: center;
+	width: 25%;
 }
 .secIcon img {
-	position: relative;
-	height: 80%;
-	width: 80%;
+	width: 40px;
+	vertical-align: middle;
 }
 .lightSection {
 	display: inline-block;
@@ -860,6 +944,28 @@ button {
 	.hoursBox {
 		font-size: 18px;
 		line-height: 24px;
+	}
+	.infographicBox {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.iContentLeftBottom {
+		margin-top: 20px;
+	}
+	.iHook {
+		font-size: 28px;
+	}
+	.iSubTitle {
+		font-size: 28px;
+	}
+	.iTitle {
+		font-size: 36px;
+	}
+	.iXs {
+		padding: 2px 13px;
+		margin: 0 2px;
+		font-size: 30px;
+		border-radius: 50%;
 	}
 	.iconContent {
 		font-size: 16px;
