@@ -148,6 +148,11 @@ button {
 .icon img {
 	width: 5vmin;
 }
+.infoContainer {
+	margin-top: 24px;
+	padding: 6px 0;
+	background-color: #0b52a0;
+}
 .boldItalic {
 	display: inline;
 	color: inherit;
@@ -269,13 +274,13 @@ button {
 	line-height: 18px;
 }
 .iBox1 {
-	background-color: rgba(49, 129, 127, 1)
+	background-color: rgba(49, 129, 127, 1)!important;
 }
 .iBox2 {
-	background-color: rgba(83, 165, 142, 0.8);
+	background-color: rgba(83, 165, 142, 0.8)!important;
 }
 .iBox3 {
-	background-color: rgba(120, 208, 156, 0.8)
+	background-color: rgba(120, 208, 156, 0.8)!important;
 }
 .iContentLeft {
 	font-weight: bold;
@@ -444,32 +449,39 @@ button {
 .menuNav {
 	border-bottom: 1px solid white;
 }
-.c1 {
+.circle {
 	width: 150px;
 	height: 150px;
-}
-.c3 {
-	width: 250px;
-	height: 250px;
-}
-.c2 {
-	width: 300px;
-	height: 300px;
-}
-.circle {
 	padding: 20px;
-	font-size: 16px;
+	font-size: 14px;
 	display: table-cell;
 	vertical-align: middle;
 	margin: 0 auto;
 	border-radius: 50%;
-	background-color:  #0b52a0;
 	text-align: center;
+	background-color: #0b52a0;
+}
+.circleLine {
+	position: relative;
+	display: table-cell;
+	width: 30px;
+}
+.circleLine:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+	background-color: rgba(83, 165, 142, 0.8)!important;
 }
 .circleTable {
-	width: 300px;
+	width: 100%;
 	min-height: 100%;
 	margin: 0 auto;
+}
+.circleTable tr td {
+	display: inline-block;
 }
 .darkSection {
 	text-align: left;
@@ -629,7 +641,7 @@ button {
 	text-align: center;
 }
 #carelessDrivingBox {
-	background-color: green;
+	background-color: rgba(49, 129, 127, 1);
 }
 
 #container {
@@ -906,6 +918,11 @@ button {
 		font-size: 22px;
 	}
 	.callBackText {
+		font-size: 24px;
+	}
+	.circle {
+		width: 300px;
+		height: 300px;
 		font-size: 24px;
 	}
 	.contentContainer {
