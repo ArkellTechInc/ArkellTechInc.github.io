@@ -99,6 +99,7 @@ function switchOrientation(mode) {
 			}
 			//Prevent vertical scrolling
 			$("body").css("overflow-y", "hidden");
+			$("body").css("-webkit-overflow-scrolling", "hidden");
 			
 			togglePaginationClasses(mode);
 			break;
