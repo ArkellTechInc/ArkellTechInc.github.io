@@ -48,7 +48,7 @@ blockquote, q {
 }
 /*--------------------------------------------------------------------- END OF RESET -------------------------------------------------------------------------- */
 *{
-	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-family: Calibri, Helvetica, Arial, sans-serif;
 	box-sizing: border-box;
 	color: #EEE;
 }
