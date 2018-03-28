@@ -116,6 +116,7 @@ function switchOrientation(mode) {
 			
 			//Allow vertical scrolling
 			$("body").css("overflow-y", "auto");
+			$("body").css("-webkit-overflow-scrolling", "auto");
 			
 			togglePaginationClasses(mode);
 			
@@ -155,7 +156,7 @@ function toggleMenu() {
 
 function showMenu() {
 	menuVisible = true;
-	
+	disableScroll();
 	menuTarget = 1;
 	clearInterval(menuAnimation);                 //interrupt menu animation if it's already underway
 	menuAnimation = setInterval(updateMenu, 15);
@@ -163,7 +164,7 @@ function showMenu() {
 
 function hideMenu() {
 	menuVisible = false;
-	
+	enableScroll();
 	menuTarget = 0;
 	clearInterval(menuAnimation);                 //interrupt menu animation if it's already underway
 	menuAnimation = setInterval(updateMenu, 15);
@@ -224,7 +225,7 @@ function pageStyleUpdate() {
 	switch (currentOrientation) {
 		case "Portrait":
 			$(".contentContainer").css("border-bottom","none");
-			$(".contentContainer").css("min-height","100%");
+			$(".contentContainer").css("min-height","100vh");
 			break;
 		case "Landscape":
 			$(".contentContainer").css("border-bottom","1px dotted #CCC");
@@ -347,6 +348,7 @@ function toggleBox(index){
 $(':input').on('focus', function() {
 	if(isMobile){
 		$("body").css("overflow-y", "visible");
+		$("body").css("-webkit-overflow-scrolling", "auto");
 		$("body").css("height","150%");
 		document.body.scrollTop += this.getBoundingClientRect().top - 10;
 	} else return false;
@@ -355,6 +357,40 @@ $(':input').on('blur', function() {
 	if(isMobile){
 		window.scrollTo(0,0);
 		$("body").css("overflow-y", "hidden");
+		$("body").css("-webkit-overflow-scrolling", "hidden");
 		$("body").css("height","100%");
 	} else return false;
 });
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
