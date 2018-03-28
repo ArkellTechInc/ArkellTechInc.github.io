@@ -1079,7 +1079,8 @@ button {
 }
 @media screen and (max-width: 320px) {
 	* {
-		font-size: 96% !important;
+		all: unset;
+		font-size: 12px !important;
 	}
 }
 
