@@ -48,9 +48,9 @@ blockquote, q {
 }
 /*--------------------------------------------------------------------- END OF RESET -------------------------------------------------------------------------- */
 *{
-	font-family: Calibri, Helvetica, Arial, sans-serif;
+	font-family: Calibri, Helvetica, -apple-system, Arial, sans-serif;
 	box-sizing: border-box;
-	color: #EEE;
+	color: white;
 }
 li:hover {
 	cursor: pointer;
