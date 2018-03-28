@@ -1,3 +1,11 @@
+/*
+Theme Name: AT Sweet Lemons
+Author: Arkell Tech Inc
+Description: Arkell Tech custom theme for Sweet Lemons Insurance
+Version: 0.0.1
+Tags: dopamine
+*/
+
 /*--------------------------------------------------------------------- CSS RESET -------------------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -730,6 +738,7 @@ button {
 	width: 4vh;
 }
 #menuImg {
+	display: table-cell;
 	margin: 25px 0 0 50px;
 	background-color: white;
 	border-radius: 25px;
@@ -744,6 +753,8 @@ button {
 #menuImg img {
 	vertical-align: middle;
 	max-width: 100px;
+	display: block;
+	margin: 0 auto;
 }
 #phoneIcon {
 	position: fixed;
@@ -1115,5 +1126,162 @@ button {
 		padding: 8px 0;
 	}
 	
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { 
+	#map {
+		height: 350px;
+	}
+	#menuImg {
+		width: 200px;
+	}
+	#menuImg img {
+		width: 175px;
+	}
+	#title {
+		font-size: 28px;
+	}
+	#sideMenu ul li {
+		font-size: 22px;
+		line-height: 60px;
+	}
+	#vid {
+		height: 300px;
+	}
+	.addressButton {
+		font-size: 24px;
+	}
+	.addressText {
+		font-size: 22px;
+	}
+	.callBackText {
+		margin: 25px 0;
+		font-size: 24px;
+	}
+	.circle {
+		width: 300px;
+		height: 300px;
+		font-size: 24px;
+	}
+	.darkSection {
+		font-size: 28px;
+	}
+	.didYouKnow {
+		font-size: 36px;
+	}
+	.didYouKnowBox ul li {
+		font-size: 26px;
+		line-height: 60px;
+	}
+	.footerBox {
+		font-size: 16px;
+	}
+	.formBox {
+		font-size: 24px;
+	}
+	.formBox button {
+		font-size: 24px;
+	}
+	.formBox select,.formBox input  {
+		height: 40px;
+	}
+	.formBox label {
+		line-height: 40px;
+	}
+	.hoursBox {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	.infographicBox {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.iHook {
+		font-size: 28px;
+	}
+	.iSubTitle {
+		font-size: 28px;
+	}
+	.iTitle {
+		font-size: 36px;
+	}
+	.iXs {
+		padding: 2px 13px;
+		margin: 0 2px;
+		font-size: 30px;
+		border-radius: 50%;
+	}
+	.iconContent {
+		font-size: 16px;
+	}
+	.iconBox {
+		width: 225px;
+		height: 225px;
+	}
+	.infoBoxLink {
+		font-size: 20px;
+	}
+	.infoBoxTitle {
+		font-size: 30px;
+		padding: 12px;
+	}
+	.infoBoxContent {
+		font-size: 26px;
+		padding: 12px;
+	}
+	.infoBoxHighlight {
+		font-size: 20px;
+		line-height: 22px;
+		padding: 24px;
+	}
+	.jobTitle {
+		margin: 20px 0 0 0;
+	}
+	.getStarted {
+		font-size: 25px;
+	}
+	.learnMore {
+		font-size: 28px;
+		padding: 16px 32px;
+	}
+	.lightSection {
+		font-size: 28px;
+	}
+	.icon {
+		padding: 8px 0;
+	}
+	.iconContent {
+		font-size: 22px;
+	}
+	.iconLabel {
+		font-size: 24px;
+		padding-bottom: 12px
+	}
+	.infoBoxFooter {
+		font-size: 14px;
+	}
+	.text2 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	.hoursBox {
+		font-size: 20px;
+	}
+	.pageSubTitle {
+		font-size: 32px;
+		padding: 12px 0 0 24px;
+	}
+	.pageTitle {
+		font-size: 24px;
+	}
+	.phoneBox {
+		font-size: 24px;
+	}
+	.staffMember {
+		font-size: 22px;
+		padding: 8px 0;
+	}
 }
 
