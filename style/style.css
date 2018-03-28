@@ -110,6 +110,7 @@ button {
 }
 .contentContainer {
 	width: 100%;
+	min-width: 255px;
 	margin: 0 auto;
 	padding: 12px;
 }
@@ -267,11 +268,16 @@ button {
 	text-align: center;
 }
 .infographicBox {
-	max-width: 100%;
+	width: 80vw;
+	min-width: 255px;
 	position: relative;
 	margin: 0 auto;
 	font-size: 14px;
 	line-height: 18px;
+}
+.infographicBox tr {
+	min-width: 100%;
+	max-width: 100%;
 }
 .iBox1 {
 	background-color: rgba(49, 129, 127, 1)!important;
@@ -771,6 +777,7 @@ button {
 	top: 0;
 	line-height: 44px;
 	min-height: 44px;
+	min-width: 320px;
 	background-color: #0b52a0;
 	z-index: 100;
 }
@@ -843,6 +850,7 @@ button {
 		top: 0;
 		left: 0;
 		width: 100vw;
+		min-width: 320px;
 		height: 10vh;
 		background-color: #0b52a0;
 	}
@@ -967,6 +975,7 @@ button {
 		line-height: 24px;
 	}
 	.infographicBox {
+		width: 100%;
 		font-size: 22px;
 		line-height: 26px;
 	}
@@ -1076,11 +1085,5 @@ button {
 		padding: 8px 0;
 	}
 	
-}
-@media screen and (max-width: 320px) {
-	* {
-		all: unset;
-		font-size: 12px !important;
-	}
 }
 
