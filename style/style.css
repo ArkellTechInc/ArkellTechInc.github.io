@@ -267,7 +267,7 @@ button {
 	text-align: center;
 }
 .infographicBox {
-	width: 100%;
+	max-width: 100%;
 	position: relative;
 	margin: 0 auto;
 	font-size: 14px;
@@ -831,7 +831,7 @@ button {
 		top: 10vh;
 		left: -300px;
 		width: 300px;
-		min-height: 100%;
+		height: 90vh;
 	}
 	.sideMenuPhonePortrait {
 		display: none !important;
