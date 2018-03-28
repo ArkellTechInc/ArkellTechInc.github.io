@@ -280,14 +280,41 @@ button {
 	min-width: 100%;
 	max-width: 100%;
 }
-.iBox1 {
-	background-color: rgba(49, 129, 127, 1)!important;
+.iBoxCareless1 {
+	background-color: #136D75!important;
 }
-.iBox2 {
-	background-color: rgba(83, 165, 142, 0.8)!important;
+.iBoxCareless2 {
+	background-color: #459B9D!important;
 }
-.iBox3 {
-	background-color: rgba(120, 208, 156, 0.8)!important;
+.iBoxCareless3 {
+	background-color: #73B6B6!important;
+}
+.iBoxImpaired1 {
+	background-color: #FFB300!important;
+}
+.iBoxImpaired2 {
+	background-color: #FFD54F!important;
+}
+.iBoxImpaired3 {
+	background-color: #FFE082!important;
+}
+.iBoxRacing1 {
+	background-color: #F44336!important;
+}
+.iBoxRacing2 {
+	background-color: #FFAB91!important;
+}
+.iBoxRacing3 {
+	background-color: #FFCCBC!important;
+}
+.iBoxTraffic1 {
+	background-color: #2196F3!important;
+}
+.iBoxTraffic2 {
+	background-color: #64B5F6!important;
+}
+.iBoxTraffic3 {
+	background-color: #90CAF9!important;
 }
 .iContentLeft {
 	font-weight: bold;
@@ -327,7 +354,7 @@ button {
 	padding: 1px 7px;
 	margin: 0 2px;
 	font-size: 10px;
-	background-color: #31817f;
+	background-color: #136D75;
 	color: #53a58e;
 	border-radius: 50%;
 }
@@ -629,6 +656,7 @@ button {
 	height: 100%;
 	background: linear-gradient(to right, black, rgba(255,0,0,0));
 	z-index: 11;
+	opacity: 0;
 }
 #callBackForm {
 	padding-top: 6px;
@@ -649,7 +677,7 @@ button {
 	text-align: center;
 }
 #carelessDrivingBox {
-	background-color: rgba(49, 129, 127, 1);
+	background-color: #136D75;
 }
 
 #container {
@@ -677,7 +705,7 @@ button {
 	margin: 0 auto;
 }
 #impairedDrivingBox {
-	background-color: orange;
+	background-color: #FFB300;
 }
 #map {
 	width: 100%;
@@ -765,7 +793,7 @@ button {
 }
 #streetRacingBox {
 	clear: both;
-	background-color: purple;
+	background-color: #F44336;
 }
 #title {
 	border: none;
@@ -800,7 +828,7 @@ button {
 	right: 0;
 }
 #trafficTicketsBox {
-	background-color: red;
+	background-color: #2196F3;
 }
 #vid {
 	margin-top: 24px;

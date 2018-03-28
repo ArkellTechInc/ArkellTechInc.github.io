@@ -3,6 +3,7 @@ var elements = ["topMenu", "menuButton", "container", "sideMenu", "content", "to
 
 var mySwiper = undefined;
 var menuVisible;
+var menuAnimating = false;
 
 //Animation variables
 var menuAnimation = 0; //Means no menuAnimation currently playing
@@ -29,7 +30,10 @@ $(document).ready(function(){
 	
 	// Call update functions once at run time, Swiper is now initialized here
 	widthUpdate(widthQuery);
-	updateMenu(); 
+	//updateMenu(); 
+	if(mySwiper != undefined){
+		mySwiper.update();
+	}
 	//Prevent animation from running if site is loaded on desktop
 	menuProgress = menuTarget;
 	
@@ -66,7 +70,7 @@ function switchLayout(){
 	if (!widthBool) { 	// Portrait phone mode
 		currentOrientation = "Portrait";
 	} else {
-		
+		enableScroll();
 		currentOrientation = "Landscape";
 	}
 	switchOrientation(currentOrientation);
@@ -88,7 +92,7 @@ function switchOrientation(mode) {
 	switch (mode) {
 		case "Portrait": 
 			//Responsive anim tings go here
-			hideMenu();
+			hideMenuInstantly();
 			
 			window.scrollTo(0, 0); //scrolls to top
 			$(".swiperFix1").addClass("swiper-container");
@@ -105,7 +109,7 @@ function switchOrientation(mode) {
 			break;
 		case "Landscape":
 			//Responsive anim tings go here
-			showMenu();
+			showMenuInstantly();
 			$(".swiperFix1").removeClass("swiper-container");
 			$(".swiperFix2").removeClass("swiper-wrapper");
 			//Disable pagination
@@ -147,30 +151,129 @@ function togglePaginationClasses(mode){
 // -- Menu Functions ------------------------------------------------------
 
 function toggleMenu() {
-	if(menuVisible){
-		hideMenu();
-	} else {
-		showMenu();
+	if(!menuAnimating){
+		menuAnimating = true;
+		//prevent spam of menubutton making jquery lose its marbles
+		setTimeout(function(){ menuAnimating = false; }, 400);
+		if(menuVisible){
+			hideMenu();
+		} else {
+			showMenu();
+		}
 	}
+
 }
 
 function showMenu() {
 	menuVisible = true;
 	disableScroll();
+	
+	$("#sideMenu").animate({left: '0px'}, 400); 
+	$("#blackBox").css("pointer-events","auto");
+	
+	if(currentOrientation == "Portrait"){
+		
+		$("#container").animate({left: (1 * menuWidth) / 2 + "px",
+		width: 100 + "vw"}, 400);
+		$("#blackBox").animate({opacity: 1}, 400);
+		
+	}
+	if(currentOrientation == "Landscape"){
+		$("#container").css("left", (1 * menuWidth) + "px");
+		$("#container").css("width", "calc(99vw - " + (1 * menuWidth) + "px)");
+		$("#blackBox").css("opacity",0);
+		$("#blackBox").css("pointer-events","none");
+	}
+	if(mySwiper != undefined){
+		mySwiper.update();
+	}
+	
+	/* Old smoothAnimate menu code
 	menuTarget = 1;
 	clearInterval(menuAnimation);                 //interrupt menu animation if it's already underway
 	menuAnimation = setInterval(updateMenu, 15);
+	*/
+}
+function showMenuInstantly() {
+	menuVisible = true;
+	disableScroll();
+	menuAnimating = false;
+	
+	$("#sideMenu").css("left", '0px'); 
+	$("#blackBox").css("pointer-events","auto");
+	
+	if(currentOrientation == "Portrait"){
+		
+		$("#container").css("left", (1 * menuWidth) / 2 + "px");
+		$("#container").css("width", 100 + "vw");
+		$("#blackBox").css("opacity",1);
+		
+	}
+	if(currentOrientation == "Landscape"){
+		$("#container").css("left", (1 * menuWidth) + "px");
+		$("#container").css("width", "calc(99vw - " + (1 * menuWidth) + "px)");
+		$("#blackBox").css("opacity",0);
+		$("#blackBox").css("pointer-events","none");
+	}
+	if(mySwiper != undefined){
+		mySwiper.update();
+	}
 }
 
 function hideMenu() {
 	menuVisible = false;
 	enableScroll();
-	menuTarget = 0;
-	clearInterval(menuAnimation);                 //interrupt menu animation if it's already underway
-	menuAnimation = setInterval(updateMenu, 15);
+	
+	$("#sideMenu").animate({left: -menuWidth + 'px'}, 400); 
+	$("#blackBox").css("pointer-events","none");
+	
+	
+	
+	if(currentOrientation == "Portrait"){
+		
+		$("#container").animate({left: "0px", 
+								width: 100 + "vw"}, 400);
+		$("#blackBox").animate({opacity:0}, 400);
+		
+	}
+	if(currentOrientation == "Landscape"){
+		$("#container").animate({left: (0 * menuWidth) + "px"}, 400);
+		$("#container").animate({width: "calc(99vw - " + (0 * menuWidth) + "px)"}, 400);
+		$("#blackBox").css("opacity",0);
+		$("#blackBox").css("pointer-events","none");
+	}
+	if(mySwiper != undefined){
+		mySwiper.update();
+	}
+}
+function hideMenuInstantly() {
+	menuVisible = false;
+	enableScroll();
+	menuAnimating = false;
+	
+	$("#sideMenu").css("left", -menuWidth + 'px'); 
+	$("#blackBox").css("pointer-events","none");
+	if(currentOrientation == "Portrait"){
+		
+		$("#container").css("left", (0 * menuWidth) / 2 + "px");
+		$("#container").css("width", 100 + "vw");
+		$("#blackBox").css("opacity",0);
+		
+	}
+	if(currentOrientation == "Landscape"){
+		$("#container").css("left", (0 * menuWidth) + "px");
+		$("#container").css("width", "calc(99vw - " + (0 * menuWidth) + "px)");
+		$("#blackBox").css("opacity",0);
+		$("#blackBox").css("pointer-events","none");
+	}
+	if(mySwiper != undefined){
+		mySwiper.update();
+	}
 }
 
+/*
 function updateMenu(){
+	// This function is now unused
 	
 	if (Math.abs(menuProgress - menuTarget) < 0.005) { //Close enough to target, snap to target and stop animation
 		menuProgress = menuTarget;
@@ -207,7 +310,7 @@ function updateMenu(){
 	if(mySwiper != undefined){
 		mySwiper.update();
 	}
-}
+}*/
 function goToDir() {
 	if (mySwiper != undefined) {
 		mySwiper.slideTo(2);
@@ -378,12 +481,17 @@ function preventDefaultForScrollKeys(e) {
 }
 
 function disableScroll() {
-  if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, false);
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove  = preventDefault; // mobile
-  document.onkeydown  = preventDefaultForScrollKeys;
+	if(currentOrientation == "Landscape"){
+		return false;
+	} else {
+	  if (window.addEventListener) // older FF
+		  window.addEventListener('DOMMouseScroll', preventDefault, false);
+	  window.onwheel = preventDefault; // modern standard
+	  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+	  window.ontouchmove  = preventDefault; // mobile
+	  document.onkeydown  = preventDefaultForScrollKeys;
+	}
+
 }
 
 function enableScroll() {
