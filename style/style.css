@@ -89,7 +89,7 @@ button {
 	float: right;
 	color: #333;
 	font-weight: 100;
-	font-size: 14px;
+	font-size: 10px;
 	font-style: italic;
 	width: 40%;
 	text-align: center;
@@ -100,13 +100,13 @@ button {
 .addressText {
 	float: left;
 	display: inline-block;
-	font-size: 12px;
+	font-size: 9px;
 	font-weight: bold;
 	color: #333;
 	width: 60%;
 }
 .callBackText {
-	font-size: 14px;/* mq 24px */
+	font-size: 10px;/* mq 24px */
 }
 .contentContainer {
 	width: 100%;
@@ -127,16 +127,16 @@ button {
 .didYouKnow {
 	color: #555 !important;
 	font-weight: inherit;
-	font-size: 14px;/* mq 26px */
+	font-size: 10px;/* mq 26px */
 	letter-spacing: 1px;
-	margin: 12px 0;
+	margin: 3px 0;
 }
 
 .didYouKnowBox ul li {
 	color: #0b52a0;
-	line-height: 20px;
+	line-height: 16px;
 	font-weight: inherit;
-	font-size: 12px;/* mq 20px, */
+	font-size: 9px;/* mq 20px, */
 }
 .displayNone {
 	display: none;
@@ -150,7 +150,7 @@ button {
 	width: 5vmin;
 }
 .infoContainer {
-	font-size: 13px;
+	font-size: 12px;
 	margin-top: 24px;
 	padding: 6px 0;
 	background-color: #0b52a0;
@@ -163,7 +163,7 @@ button {
 }
 .footerBox {
 	vertical-align: bottom;
-	font-size: 12px;
+	font-size: 8px;
 	color: #333;
 	padding-bottom: 24px;
 }
@@ -172,12 +172,12 @@ button {
 	text-decoration: underline;
 }
 .formBox {
-	font-size: 16px;/* mq 24px, */
+	font-size: 12px;/* mq 24px, */
 	margin: 10px 0;
 }
 .formBox button {
-	line-height: 30px;
-	font-size: 14px;/* mq 24px, */
+	line-height: 20px;
+	font-size: 10px;/* mq 24px, */
 	clear: both;
 	float: none !important;
 	margin: 0 auto !important;
@@ -247,7 +247,7 @@ button {
 	width: 4min;
 }
 .getStarted {
-	font-size: 15px; /* mq 25px, */
+	font-size: 11px; /* mq 25px, */
 	padding: 6px;
 	border: none;
 	border-radius: 12px;
@@ -258,7 +258,7 @@ button {
 .hoursBox {
 	color: #666;
 	font-weight: bold;
-	font-size: 12px; /* mq 18px, */
+	font-size: 9px; /* mq 18px, */
 	line-height: 16px; /* mq 24px, */
 	letter-spacing: 1px;
 	padding: 10px;
@@ -273,7 +273,7 @@ button {
 	min-width: 255px;
 	position: relative;
 	margin: 0 auto;
-	font-size: 14px;
+	font-size: 10px;
 	line-height: 18px;
 }
 .infographicBox tr {
@@ -305,7 +305,7 @@ button {
 .iHook {
 	width: 80%;
 	padding: 3%;
-	font-size: 20px;
+	font-size: 10px;
 	text-align: center;
 	border-top: 2px solid white;
 	font-weight: 700;
@@ -313,20 +313,20 @@ button {
 .iSubTitle {
 	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	padding: 0 0 5% 0;
-	font-size: 22px;
+	font-size: 11px;
 	font-weight: 10;
 	text-align: center;
 }
 .iTitle {
 	padding: 3%;
-	font-size: 28px;
+	font-size: 14px;
 	text-align: center;
 	font-weight: 700;
 }
 .iXs {
 	padding: 1px 7px;
 	margin: 0 2px;
-	font-size: 20px;
+	font-size: 10px;
 	background-color: #31817f;
 	color: #53a58e;
 	border-radius: 50%;
@@ -351,13 +351,13 @@ button {
 }
 .iconContent {
 	display: none;
-	font-size: 16px; /* mq 22px, */
+	font-size: 12px; /* mq 22px, */
 	border-radius: 16px;
 	padding: 16px;
 }
 .iconLabel {
 	position: absolute;
-	font-size: 12px; /* mq 24px, */
+	font-size: 8px; /* mq 24px, */
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -384,7 +384,7 @@ button {
 	text-align: center;
 	color: #555;
 	font-weight: regular;
-	font-size: 12px;
+	font-size: 8px;
 	letter-spacing: 1px;
 	padding: 4px 0;
 }
@@ -392,14 +392,14 @@ button {
 	color: #0b52a0;
 	text-align: center;
 	font-weight: regular;
-	font-size: 12px;
+	font-size: 8px;
 	letter-spacing: 1px;
 	padding: 6px 0 6px 0;
 }
 .infoBoxHighlight {
 	color: #666;
 	font-weight: bold;
-	font-size: 10px;
+	font-size: 7px;
 	line-height: 12px;
 	letter-spacing: 1px;
 	padding: 6px;
@@ -411,7 +411,7 @@ button {
 	text-align: center;
 	color: white;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 8px;
 	letter-spacing: 0.1vmin;
 	padding: 24px 9px;
 	border-radius: 1vmin;
@@ -423,7 +423,7 @@ button {
 .infoBoxTitle {
 	color: #555;
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 14px;
 	letter-spacing: 0.9px;
 }
 .infographic {
@@ -440,7 +440,7 @@ button {
 	color: white;
 	background-color: #0b52a0;
 	border-radius: 25px;
-	font-size: 14px;
+	font-size: 10px;
 	font-weight: 500;
 	padding: 16px;
 }
@@ -462,7 +462,7 @@ button {
 	width: 150px;
 	height: 150px;
 	padding: 20px;
-	font-size: 14px;
+	font-size: 10px;
 	display: table-cell;
 	vertical-align: middle;
 	margin: 0 auto;
@@ -534,7 +534,7 @@ button {
 }
 .pageSubTitle {
 	color: #999;
-	font-size: 14px;
+	font-size: 10px;
 	font-weight: bold;
 	text-align: left;
 	padding: 12px 0 0 12px;
@@ -543,7 +543,7 @@ button {
 	display: block;
 	clear: both;
 	color: white;
-	font-size: 12px;
+	font-size: 8px;
 	font-weight: bold;
 	margin: 0 auto;
 	text-align: left;
@@ -554,7 +554,7 @@ button {
 .phoneBox {
 	color: inherit;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 10px;
 	font-weight: 400;
 	background-color: #3E85D3;
 	border-radius: 12px;
@@ -581,9 +581,9 @@ button {
 	margin: 6px auto 6px auto;
 	width: 90%;
 	color: #333;
-	font-size: 12px;
+	font-size: 8px;
 	font-weight: bold;
-	line-height: 16px;
+	line-height: 12px;
 }
 .subMenu {
 	text-indent: 30px;
@@ -600,7 +600,7 @@ button {
 }
 .text2 {
 	text-align: left;
-	font-size: 16px;
+	font-size: 12px;
 	font-weight: lighter;
 	text-indent: 16px;
 	line-height: 16px;
@@ -706,7 +706,7 @@ button {
 	margin: 25px 0 0 50px;
 	background-color: white;
 	border-radius: 25px;
-	width: 200px;
+	width: 150px;
 	padding: 25px;
 	object-fit: contain;
 }
@@ -716,7 +716,7 @@ button {
 }
 #menuImg img {
 	vertical-align: middle;
-	max-width: 150px;
+	max-width: 100px;
 }
 #phoneIcon {
 	position: fixed;
@@ -749,8 +749,8 @@ button {
 	display: block;
 	padding-left: 20px;
 	vertical-align: middle;
-	line-height: 44px;
-	font-size: 16px;
+	line-height: 30px;
+	font-size: 12px;
 	letter-spacing: 1px;
 	font-weight: regular;
 }
@@ -770,7 +770,7 @@ button {
 }
 #title {
 	border: none;
-	font-size: 16px;
+	font-size: 12px;
 	line-height: 10vh;
 	text-align: center;
 	background: transparent;
