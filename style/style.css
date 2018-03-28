@@ -127,16 +127,16 @@ button {
 .didYouKnow {
 	color: #555 !important;
 	font-weight: inherit;
-	font-size: 18px;/* mq 26px */
+	font-size: 14px;/* mq 26px */
 	letter-spacing: 1px;
 	margin: 12px 0;
 }
 
 .didYouKnowBox ul li {
 	color: #0b52a0;
-	line-height: 30px;
+	line-height: 20px;
 	font-weight: inherit;
-	font-size: 14px;/* mq 20px, */
+	font-size: 12px;/* mq 20px, */
 }
 .displayNone {
 	display: none;
@@ -150,6 +150,7 @@ button {
 	width: 5vmin;
 }
 .infoContainer {
+	font-size: 13px;
 	margin-top: 24px;
 	padding: 6px 0;
 	background-color: #0b52a0;
@@ -374,17 +375,18 @@ button {
 .infoBox {
 	width: 90%;
 	margin: 12px auto;
-	padding: 18px 12px;
+	padding: 9px 6px;
 	border-radius: 2px;
 	text-align: left;
 	background-color: white;
 }
 .infoBoxContent {
+	text-align: center;
 	color: #555;
 	font-weight: regular;
-	font-size: 16px;
+	font-size: 12px;
 	letter-spacing: 1px;
-	padding: 12px 0 12px 0;
+	padding: 4px 0;
 }
 .infoBoxFooter {
 	color: #0b52a0;
@@ -397,10 +399,11 @@ button {
 .infoBoxHighlight {
 	color: #666;
 	font-weight: bold;
-	font-size: 12px;
-	line-height: 14px;
-	letter-spacing: 0.1vmin;
-	padding: 12px;
+	font-size: 10px;
+	line-height: 12px;
+	letter-spacing: 1px;
+	padding: 6px;
+	text-align: center;
 	border-radius: 9px;
 	background-color: #D7FFFF;
 }
@@ -437,7 +440,7 @@ button {
 	color: white;
 	background-color: #0b52a0;
 	border-radius: 25px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 	padding: 16px;
 }
@@ -540,7 +543,7 @@ button {
 	display: block;
 	clear: both;
 	color: white;
-	font-size: 16px;
+	font-size: 12px;
 	font-weight: bold;
 	margin: 0 auto;
 	text-align: left;
@@ -551,13 +554,13 @@ button {
 .phoneBox {
 	color: inherit;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 400;
 	background-color: #3E85D3;
 	border-radius: 12px;
 	float: right !important;
 	text-align: center !important;
-	padding: 9px;
+	padding: 6px;
 	transform: translate(0,-25%);
 	-ms-transform: translate(0, -25%);
     -webkit-transform: translate(0, -25%);
@@ -767,7 +770,7 @@ button {
 }
 #title {
 	border: none;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 10vh;
 	text-align: center;
 	background: transparent;
